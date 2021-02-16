@@ -115,6 +115,15 @@ text-align: center;
 }
 
 #map {
-    height: 200px;
-    width: 300px;
+    height: 300px;
+    width: 500px;
+    margin-left:300px;
+    margin-bottom: 200px;
   }
+
+#position_show{
+    display: none;
+}
+#position_show2{
+    display: none;
+}

@@ -1,0 +1,59 @@
+<div class="container">
+    <div class="detail">
+        <%= image_tag @post.image ,class: "detail__image" %>
+        <p class="detail__text">スポット名：<%= @post.name%></p>
+        <p class="detail__text">コメント：<%= @post.description%></p>
+        <p class="detail__text">所在地：<%= @post.address%></p>
+        <div id='map'></div>
+    </div>
+</div>
+<p id="position_show"><%= @post.latitude%></p>
+<p id="position_show2"><%= @post.longitude%></p>
+<script>
+let map 
+let geocoder
+let position = document.getElementById('position_show')
+let position2 = document.getElementById('position_show2')
+console.log(Number(position.innerHTML))
+// 下の1行を追加 
+const display = document.getElementById('display')
+
+function initMap(){
+  geocoder = new google.maps.Geocoder()
+
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat:Number(position.innerHTML), lng:Number(position2.innerHTML)},
+    zoom: 12,
+  });
+
+  marker = new google.maps.Marker({
+    position:{lat:Number(position.innerHTML), lng:Number(position2.innerHTML)},
+    map: map
+  });
+}
+
+function codeAddress(){
+  let inputAddress = document.getElementById('address').value;
+
+  geocoder.geocode( { 'address': inputAddress}, function(results, status) {
+    if (status == 'OK') {
+      map.setCenter(results[0].geometry.location);
+      var marker = new google.maps.Marker({
+          map: map,
+          position: results[0].geometry.location
+      });
+      // 下の1行を追加 
+      display.textContent = "検索結果：" + results[ 0 ].geometry.location
+      let location = results[ 0 ].geometry.location
+      var lat = location.lat();
+      var lng = location.lng();    
+      document.getElementById( "latitude" ).value = lat
+       document.getElementById( "longitude" ).value = lng
+  
+    } else {
+      alert('該当する結果がありませんでした：' + status);
+    }
+  });   
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAP_API_KEY']%>&callback=initMap" async defer></script>
