@@ -16,20 +16,19 @@
 
   <body>
     <nav class="navbar navbar-dark bg-dark fixed-top">
-        <div class="container-fluid">
+      <div class="container-fluid">
             <a class="navbar-brand" href="/">Kansai_chill_spots</a>
-            <div class="nav-btn">
-        
-        <%# <% if user_signed_in? %> 
-              <%# <%= link_to "ログアウト", destroy_user_session_path, method: :delete,class:"btn btn-border"  %> 
-              <%# <%= link_to "スポット投稿","#", class:"btn btn-border" %> %>
-            <%# <% else %> 
-              <%= link_to "ログイン",'#' ,class:"btn btn-border" %>
+        <div class="nav-btn">
+          <% if user_signed_in? %>
+              <%= link_to "ログアウト", destroy_user_session_path, method: :delete,class:"btn btn-border"  %>
+              <%= link_to "スポット投稿","#", class:"btn btn-border" %>
+            <% else %>
+              <%= link_to "ログイン",new_user_session_path, class:"btn btn-border" %>
             
-              <%= link_to "新規登録",'#', class:"btn btn-border" %>
-            <%# <% end %> 
-            </div>
+              <%= link_to "新規登録",new_user_registration_path, class:"btn btn-border" %>
+            <% end %>
         </div>
+      </div>
     </nav>
     <%= yield %>
   </body>
