@@ -1,15 +1,36 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>KansaiChillSpots</title>
+    <title>App</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi&family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet">  
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
   </head>
 
   <body>
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">Kansai_chill_spots</a>
+            <div class="nav-btn">
+        
+        <%# <% if user_signed_in? %> 
+              <%# <%= link_to "ログアウト", destroy_user_session_path, method: :delete,class:"btn btn-border"  %> 
+              <%# <%= link_to "スポット投稿","#", class:"btn btn-border" %> %>
+            <%# <% else %> 
+              <%= link_to "ログイン",'#' ,class:"btn btn-border" %>
+            
+              <%= link_to "新規登録",'#', class:"btn btn-border" %>
+            <%# <% end %> 
+            </div>
+        </div>
+    </nav>
     <%= yield %>
   </body>
 </html>
