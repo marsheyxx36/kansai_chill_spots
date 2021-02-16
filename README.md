@@ -22,3 +22,33 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+
+## Userテーブル
+
+| Column | type | option |
+| :--- | :--- | :--- |
+| name| string | null: false |
+| email| string | null: false |
+| nickname| string | null: false |
+
+## Postテーブル
+
+| Column | type | option |
+| :--- | :--- | :--- |
+| name| string | null: false |
+| description| string | null: false |
+| address| string | null: false |
+| image| string | null: false |
+| latitude| float | null: false |
+| longitude| float | null: false |
+| user_id| reference | foreign_key: true,null: false |
+
+## Commentテーブル
+
+| Column | type | option |
+| :--- | :--- | :--- |
+| text| string | null: false |
+| user_id| reference | foreign_key: true,null: false |
+| post_id| reference | foreign_key: true,null: false |
