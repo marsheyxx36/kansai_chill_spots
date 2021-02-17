@@ -97,28 +97,63 @@ footer{
 
 .detail{
 
-text-align: center;
+text-align: left;
 
 &__image{
-       width:500px;
+       width:860px;
        height:auto;
-       margin: 100px auto 50px;
+       margin:  150px auto;
        display: block;
 }
 
 &__text{
-    font-size: 30px;
+    
     font-family: 'Kosugi', sans-serif;
     font-family: 'Noto Sans JP', sans-serif;
-    margin:50px auto;
+    margin-top:100px;
+    margin:  50px auto;
 }
+}
+.spot_name{
+    font-weight: bold;
+    font-size: 30px;
+    width: 70%;
+}
+
+.spot_description{
+    border:1px solid #c8c8c8;
+    border-radius: 5px;
+    height: 150px;
+    padding: 10px;
+    font-size: 20px;
+    width: 70%;
+}
+
+.spot_address{
+    border:1px solid #c8c8c8;
+    border-radius: 5px;
+    height: 40px;
+    padding: 10px;
+    font-size: 15px;
+    width: 70%;
 }
 
 #map {
+   
+    margin-top:50px;
+    margin:  0 auto;
+}
+
+  .map1{
     height: 300px;
-    width: 500px;
-    margin-left:300px;
+    width: 400px;
+  }
+
+  .map2 {
+    height: 300px;
+    width: 70%;
     margin-bottom: 200px;
+    margin-left: 50px;
   }
 
 #position_show{

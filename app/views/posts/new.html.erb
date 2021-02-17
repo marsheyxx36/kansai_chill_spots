@@ -23,12 +23,11 @@
         <%= f.hidden_field :longitude, id:"longitude" , value: "" %>
 
 
-    <input type="button" value="検索" onclick="codeAddress()">
+    <input type="button" value="マップで検索" onclick="codeAddress()">
 
 <!-- 下の1行を追加 -->
-<div id="display"></div>
-
-<div id='map'></div>
+　　<div id="display"></div>
+　　<div id='map' class="map1"></div>
 
    <div class="field mt-5">
         <%= f.label :image,"スポットの画像" %> <br>
@@ -42,13 +41,6 @@
 <% end %>
 
 
-<style>
-#map {
-  height: 300px;
-  width: 400px;
-}
-</style>
-
 <script>
 let map
 let geocoder
@@ -60,7 +52,7 @@ function initMap(){
 
   map = new google.maps.Map(document.getElementById('map'), {
     center: {lat:35.68123620000001, lng:139.7671248},
-    zoom: 12,
+    zoom: 16,
   });
 
   marker = new google.maps.Marker({

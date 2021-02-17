@@ -1,10 +1,10 @@
 <div class="container">
     <div class="detail">
-        <%= image_tag @post.image ,class: "detail__image" %>
-        <p class="detail__text">スポット名：<%= @post.name%></p>
-        <p class="detail__text">コメント：<%= @post.description%></p>
-        <p class="detail__text">所在地：<%= @post.address%></p>
-        <div id='map'></div>
+         <%= image_tag @post.image ,class: "detail__image" %>
+         <p class="detail__text spot_name">スポット名：<%= @post.name%></p>
+        <p class="detail__text spot_description"><%= @post.description%></p>
+        <p class="detail__text spot_address">所在地：<%= @post.address%></p>
+        <div id='map' class="map2"></div>
     </div>
 </div>
 <p id="position_show"><%= @post.latitude%></p>
@@ -23,7 +23,7 @@ function initMap(){
 
   map = new google.maps.Map(document.getElementById('map'), {
     center: {lat:Number(position.innerHTML), lng:Number(position2.innerHTML)},
-    zoom: 12,
+    zoom: 16,
   });
 
   marker = new google.maps.Marker({
@@ -56,4 +56,4 @@ function codeAddress(){
   });   
 }
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAP_API_KEY']%>&callback=initMap" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=<%=ENV['GOOGLE_MAP_API_KEY']%>&callback=initMap" async defer></script>

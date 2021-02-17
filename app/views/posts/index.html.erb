@@ -8,8 +8,7 @@
           <h1 class="latest-title mb-5">みんなの最新投稿</h1>
           <div class="container d-flex">
            <div class="row rows-cols3">
-
- <% @posts.each do |post| %>
+            <% @posts.each do |post| %>
               <div class="post col">
               <%= link_to post_path(post.id) , class: "post_link" do%>
               <div class="image">
@@ -40,3 +39,4 @@
       <p class="copyright">©KOUHEI-MASUDA</p>
     </div>
   </div>
+  </footer>
