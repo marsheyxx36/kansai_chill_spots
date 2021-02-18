@@ -2,29 +2,31 @@
 <div class="form-style-6 mt-5 user-form">
 <h2>スポット投稿</h2>
 <%= form_with(model: @post, local: true) do |f| %>
+ <%# <%= render 'layouts/error_messages', model: f.object %> 
+   
    <div class="field mt-5">
     <%= f.label :name ,"スポット名" %><br />
     <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
    </div>
-
+     <p style="color: red;"><%= @post.errors.full_messages_for(:name).first %>
 
    <div class="field mt-5">
         <%= f.label :description ,"スポットの説明"%>
         <%= f.text_field :description, autofocus: true, autocomplete: "description" %>
    </div>
 
-
+ <p style="color: red;"><%= @post.errors.full_messages_for(:description).first %>
    <div class="field mt-5">
         <%= f.label :address,"スポットの住所" %>
         <%= f.text_field :address, id:"address" , value: "" %>
    </div>
-
+<p style="color: red;"><%= @post.errors.full_messages_for(:address).first %>
         <%= f.hidden_field :latitude, id:"latitude" , value: "" %>
         <%= f.hidden_field :longitude, id:"longitude" , value: "" %>
 
 
     <input type="button" value="マップで検索" onclick="codeAddress()">
-
+<p style="color: red;"><%= @post.errors.full_messages_for(:latitude).first %>
 <!-- 下の1行を追加 -->
 　　<div id="display"></div>
 　　<div id='map' class="map1"></div>
@@ -33,6 +35,7 @@
         <%= f.label :image,"スポットの画像" %> <br>
         <%= f.file_field :image, autofocus: true, autocomplete: "image" %>
    </div>
+   <p style="color: red;"><%= @post.errors.full_messages_for(:image).first %>
 
   <div class="actions mt-5">
     <%= f.submit "投稿" %>

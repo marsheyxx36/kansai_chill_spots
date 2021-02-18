@@ -7,3 +7,10 @@ ja:
         email: メールアドレス
         nickname: ニックネーム
         password: パスワード
+      
+      post:
+        name: スポット名
+        description: スポットの説明
+        address: 住所
+        latitude: 住所
+        image: 画像
