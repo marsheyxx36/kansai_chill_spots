@@ -21,7 +21,7 @@
         <div class="nav-btn">
           <% if user_signed_in? %>
               <%= link_to "ログアウト", destroy_user_session_path, method: :delete,class:"btn btn-border"  %>
-              <%= link_to "スポット投稿","#", class:"btn btn-border" %>
+              <%= link_to "スポット投稿",new_post_path, class:"btn btn-border" %>
             <% else %>
               <%= link_to "ログイン",new_user_session_path, class:"btn btn-border" %>
             

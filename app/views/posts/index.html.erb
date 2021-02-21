@@ -8,63 +8,25 @@
           <h1 class="latest-title mb-5">みんなの最新投稿</h1>
           <div class="container d-flex">
            <div class="row rows-cols3">
-
-
-         <div class="post col">
+            <% @posts.each do |post| %>
+              <div class="post col">
+              <%= link_to post_path(post.id) , class: "post_link" do%>
               <div class="image">
-                <%= image_tag 'bob20802A0213_TP_V.jpg' ,width:'270px'%>
+                <%= image_tag post.image ,width:'270px',height:'205px' %>
               </div>
               <div class="info">
                 <div class="user-info">
-                  <p class="user-name">投稿者：あああ</p>
+                  <p class="user-name">投稿者：<%= post.user.nickname %></p>
                 </div>
                 <div class="spot-info">
-                    <p class="spot-name">あああ</p>
+                   <p class="spot-name">スポット名：<%= post.name %></p>
                 </div>
               </div>
             </div>
+              <% end %>
+           <% end %>
 
-             <div class="post col">
-              <div class="image">
-                <%= image_tag 'bob20802A0213_TP_V.jpg' ,width:'270px'%>
-              </div>
-              <div class="info">
-                <div class="user-info">
-                  <p class="user-name">投稿者：あああ</p>
-                </div>
-                <div class="spot-info">
-                    <p class="spot-name">あああ</p>
-                </div>
-              </div>
-            </div>
-
-             <div class="post col">
-              <div class="image">
-                <%= image_tag 'bob20802A0213_TP_V.jpg' ,width:'270px'%>
-              </div>
-              <div class="info">
-                <div class="user-info">
-                  <p class="user-name">投稿者：あああ</p>
-                </div>
-                <div class="spot-info">
-                    <p class="spot-name">あああ</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="post col">
-              <div class="image">
-                <%= image_tag 'bob20802A0213_TP_V.jpg' ,width:'270px'%>
-              </div>
-              <div class="info">
-                <div class="user-info">
-                  <p class="user-name">投稿者：あああ</p>
-                </div>
-                <div class="spot-info">
-                    <p class="spot-name">あああ</p>
-                </div>
-              </div>
-            </div>
+            
           </div>
             
 
@@ -77,3 +39,4 @@
       <p class="copyright">©KOUHEI-MASUDA</p>
     </div>
   </div>
+  </footer>
