@@ -1,14 +1,37 @@
 <div class="container">
     <div class="detail">
-         <%= image_tag @post.image ,class: "detail__image" %>
-         <p class="detail__text spot_name">スポット名：<%= @post.name%></p>
+        <%= image_tag @post.image ,class: "detail__image" %>
+        <p class="detail__text spot_name">スポット名：<%= @post.name%></p>
         <p class="detail__text spot_description"><%= @post.description%></p>
         <p class="detail__text spot_address">所在地：<%= @post.address%></p>
         <div id='map' class="map2"></div>
-    </div>
+        <p id="position_show"><%= @post.latitude%></p>
+        <p id="position_show2"><%= @post.longitude%></p>
+        <h2 class="detail__text comments_all">コメント一覧</h2>
+        <div class="comments">
+            <div class="comment">
+            　　<p class="comment__content">すごいいい景色ですね</p>
+            　　<div class="comment__user-info">
+                <p class="comment__user-info__name">ますださん</p>
+                <p class="comment__user-info__time">2020-02-22-00:00</p>
+                </div>
+             </div>
+            <div class="comment">
+            　　<p class="comment__content">すごいいい景色ですね</p>
+            　　<div class="comment__user-info">
+                <p class="comment__user-info__name">ますださん</p>
+                <p class="comment__user-info__time">2020-02-22-00:00</p>
+                </div>
+            </div>
+            <div class="comment">
+            　　<p class="comment__content">すごいいい景色ですね</p>
+            　　<div class="comment__user-info">
+                <p class="comment__user-info__name">ますださん</p>
+                <p class="comment__user-info__time">2020-02-22-00:00</p>
+                </div>
+            </div>
+        </div>
 </div>
-<p id="position_show"><%= @post.latitude%></p>
-<p id="position_show2"><%= @post.longitude%></p>
 <script>
 let map 
 let geocoder
