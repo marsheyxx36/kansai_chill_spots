@@ -135,7 +135,7 @@ text-align: left;
 }
 .comment{
     margin-top:30px;
-    margin:  30px 50px;
+    margin:  20px 50px;
 
 
     &__content{
@@ -152,6 +152,17 @@ text-align: left;
     }
 }
 
+.comment_form{
+    display: flex;
+    width: 70%;
+    margin:  50px auto;
+    font-family: 'Kosugi', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.comment_textarea{
+    width:200px;
+}
 .spot_description{
     border:1px solid #c8c8c8;
     border-radius: 5px;
@@ -193,4 +204,9 @@ text-align: left;
 }
 #position_show2{
     display: none;
+}
+
+input[type="text"] {
+    width: 300px;
+    height: 30px;
 }

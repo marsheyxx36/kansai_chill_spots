@@ -8,15 +8,29 @@
         <p id="position_show"><%= @post.latitude%></p>
         <p id="position_show2"><%= @post.longitude%></p>
         <h2 class="detail__text comments_all">コメント一覧</h2>
+       <%= form_with(model:[@post,@comment], local: true) do |f| %>
+<div class="actions mt-5">
+ <div class="field mt-5 comment_form">
+    <%= f.label :text ,"コメントする" ,class:"mr-3"%>
+    <%= f.text_field :text, autofocus: true, autocomplete: "name",class:"mr-3"%>
+    <%= f.submit "投稿" ,class:"mr-3"%>
+   </div>
+   
+  </div>
+       <% end %>
         <div class="comments">
-            <div class="comment">
-            　　<p class="comment__content">すごいいい景色ですね</p>
+
+              <% @comments.each do |comment| %>
+             <div class="comment">
+            　　<p class="comment__content"><%= comment.text %></p>
             　　<div class="comment__user-info">
-                <p class="comment__user-info__name">ますださん</p>
-                <p class="comment__user-info__time">2020-02-22-00:00</p>
+                <p class="comment__user-info__name mr-3"><%= comment.user.nickname %></p>
+                <p class="comment__user-info__time"><%= comment.user.created_at.strftime("%Y-%m-%d %H:%M")
+ %></p>
                 </div>
              </div>
-            <div class="comment">
+             <% end %>
+            <%# <div class="comment">
             　　<p class="comment__content">すごいいい景色ですね</p>
             　　<div class="comment__user-info">
                 <p class="comment__user-info__name">ますださん</p>
@@ -29,7 +43,7 @@
                 <p class="comment__user-info__name">ますださん</p>
                 <p class="comment__user-info__time">2020-02-22-00:00</p>
                 </div>
-            </div>
+            </div> %>
         </div>
 </div>
 <script>
