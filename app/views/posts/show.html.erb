@@ -8,15 +8,17 @@
         <p id="position_show"><%= @post.latitude%></p>
         <p id="position_show2"><%= @post.longitude%></p>
         <h2 class="detail__text comments_all">コメント一覧</h2>
+        <% if user_signed_in?%>
        <%= form_with(model:[@post,@comment], local: true) do |f| %>
 <div class="actions mt-5">
  <div class="field mt-5 comment_form">
     <%= f.label :text ,"コメントする" ,class:"mr-3"%>
-    <%= f.text_field :text, autofocus: true, autocomplete: "name",class:"mr-3"%>
+    <%= f.text_field :text, autofocus: true, autocomplete: "name",class:"mr-3 comment_textarea"%>
     <%= f.submit "投稿" ,class:"mr-3"%>
    </div>
    
   </div>
+       <% end %>
        <% end %>
         <div class="comments">
 
