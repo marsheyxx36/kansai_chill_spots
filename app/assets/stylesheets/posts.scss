@@ -100,7 +100,7 @@ footer{
 text-align: left;
 
 &__image{
-       width:860px;
+       width:70%;
        height:auto;
        margin:  100px auto 50px;
        display: block;
@@ -120,6 +120,49 @@ text-align: left;
     width: 70%;
 }
 
+.comments_all{
+    font-weight: bold;
+    font-size: 30px;
+    width: 70%;
+    
+}
+
+.comments{
+    border:1px solid #c8c8c8;
+    border-radius: 5px;
+    width: 70%;
+    margin:  50px auto;
+}
+.comment{
+    margin-top:30px;
+    margin:  20px 50px;
+
+
+    &__content{
+
+    }
+
+    &__user-info{
+        display: flex;
+        text-decoration:underline;
+        &__name{
+
+        }
+
+    }
+}
+
+.comment_form{
+    display: flex;
+    width: 70%;
+    margin:  50px auto;
+    font-family: 'Kosugi', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.comment_textarea{
+    width:200px;
+}
 .spot_description{
     border:1px solid #c8c8c8;
     border-radius: 5px;
@@ -161,4 +204,9 @@ text-align: left;
 }
 #position_show2{
     display: none;
+}
+
+input[type="text"] {
+    width: 300px;
+    height: 30px;
 }
