@@ -126,15 +126,18 @@ text-align: left;
     margin:  100px auto 50px;
     font-family: 'Kosugi', sans-serif;
     font-family: 'Noto Sans JP', sans-serif;
-    font-size: 20px;
+    font-size: 28px;
     display: flex;
     color: palevioletred;
 
     }
-
+.like_count{
+    font-size: 20px;
+    padding-top: 10px;
+}
 .likes_button{
-    width: 23%;
-    height:40px;
+    width: 28%;
+    height:49px;
     display: flex;
     border:1px solid #c8c8c8;
     border-radius: 10px;

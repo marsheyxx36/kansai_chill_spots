@@ -2,7 +2,7 @@
     <div class="detail">
         <%= image_tag @post.image ,class: "detail__image" %>
         <div class="likes">
-          <h3 class="ml-3"><%= @post.likes.count %>チルいいね！</h3>
+          <h3 class="ml-3 pt-2 like-count"><%= @post.likes.count %>チルいいね！</h3>
          <% if current_user.already_liked?(@post) %>
          <div class="likes_button mb-3 ml-3">
           <label for="likes"><p><i class="far fa-heart"></i>チルいいね！</p></label>
