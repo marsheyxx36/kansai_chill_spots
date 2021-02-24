@@ -120,6 +120,28 @@ text-align: left;
     width: 70%;
 }
 
+.likes{
+    width:70%;
+    height:auto;
+    margin:  100px auto 50px;
+    font-family: 'Kosugi', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 20px;
+    display: flex;
+    color: palevioletred;
+
+    }
+
+.likes_button{
+    width: 23%;
+    height:40px;
+    display: flex;
+    border:1px solid #c8c8c8;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
 .comments_all{
     font-weight: bold;
     font-size: 30px;
@@ -150,6 +172,10 @@ text-align: left;
         }
 
     }
+}
+
+#likes{
+    display: none;
 }
 
 .comment_form{
