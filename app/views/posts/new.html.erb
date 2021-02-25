@@ -12,7 +12,7 @@
 
    <div class="field mt-5">
         <%= f.label :description ,"スポットの説明"%>
-        <%= f.text_field :description, autofocus: true, autocomplete: "description" %>
+        <%= f.text_area :description, autofocus: true, autocomplete: "description" %>
    </div>
 
  <p style="color: red;"><%= @post.errors.full_messages_for(:description).first %>
