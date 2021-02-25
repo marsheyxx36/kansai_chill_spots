@@ -3,6 +3,7 @@
         <%= image_tag @post.image ,class: "detail__image" %>
         <div class="likes">
           <h3 class="ml-3 pt-2 like-count"><%= @post.likes.count %>チルいいね！</h3>
+          <% if user_signed_in?%>
          <% if current_user.already_liked?(@post) %>
          <div class="likes_button mb-3 ml-3">
           <label for="likes"><p><i class="far fa-heart"></i>チルいいね！</p></label>
@@ -13,6 +14,7 @@
         <label for="likes"><p><i class="far fa-heart mr-2"></i>チルいいね！</p></label>
         <%= button_to 'いいね', post_likes_path(@post) , id:"likes"%>
            </div>
+          <% end %>
           <% end %>
       
         </div>
