@@ -7,12 +7,12 @@
          <% if current_user.already_liked?(@post) %>
          <div class="likes_button mb-3 ml-3">
           <label for="likes"><p><i class="far fa-heart"></i>チルいいね！</p></label>
-          <%= button_to 'いいねを取り消す', post_like_path(@post), id: "likes",method: :delete %>
+          <%= button_to 'いいねを取り消す', post_like_path(@post), id: "likes",method: :delete, remote: true  %>
           </div>
         <% else %>
           <div class="likes_button mb-3 ml-3">
         <label for="likes"><p><i class="far fa-heart mr-2"></i>チルいいね！</p></label>
-        <%= button_to 'いいね', post_likes_path(@post) , id:"likes"%>
+        <%= button_to 'いいね', post_likes_path(@post) , id:"likes", remote: true %>
            </div>
           <% end %>
           <% end %>
