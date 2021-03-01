@@ -6,7 +6,7 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application' %>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -21,7 +21,7 @@
         <div class="nav-btn">
           <% if user_signed_in? %>
               <%= link_to "ログアウト", destroy_user_session_path, method: :delete,class:"btn btn-border"  %>
-              <%= link_to "スポット投稿",new_post_path, class:"btn btn-border" %>
+              <%= link_to "スポット投稿",new_post_path, class:"btn btn-border",dataturbolinks: false %>
             <% else %>
               <%= link_to "ログイン",new_user_session_path, class:"btn btn-border" %>
             

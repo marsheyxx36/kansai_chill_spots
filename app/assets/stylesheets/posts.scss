@@ -8,6 +8,10 @@ a.btn-border {
     text-decoration: inherit;
   }
 
+a{
+    text-decoration: none;
+}
+
 .top-image{
  width:100%;
  font-family: 'Noto Serif JP', serif;
@@ -120,6 +124,39 @@ text-align: left;
     width: 70%;
 }
 
+.likes{
+    width:70%;
+    height:auto;
+    margin:  100px auto 50px;
+    font-family: 'Kosugi', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 28px;
+    display: flex;
+    color: palevioletred;
+
+    }
+.like_count{
+    font-size: 20px;
+    padding-top: 10px;
+}
+.likes_buttons{
+    width: 70%;
+    height:49px;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding-top: 5px;
+    color: red;
+}
+
+.like_button{
+    width: 300px;
+}
+
+
+.like_count{
+    color: #e82a2a;
+    font-size: 30px;
+}
 .comments_all{
     font-weight: bold;
     font-size: 30px;
@@ -150,6 +187,10 @@ text-align: left;
         }
 
     }
+}
+
+#likes{
+    display: none;
 }
 
 .comment_form{
