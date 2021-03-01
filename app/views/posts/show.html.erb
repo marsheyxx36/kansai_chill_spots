@@ -1,23 +1,10 @@
 <div class="container">
     <div class="detail">
         <%= image_tag @post.image ,class: "detail__image" %>
-        <div class="likes">
-          <h3 class="ml-3 pt-2 like-count"><%= @post.likes.count %>チルいいね！</h3>
-          <% if user_signed_in?%>
-         <% if current_user.already_liked?(@post) %>
-         <div class="likes_button mb-3 ml-3">
-          <label for="likes"><p><i class="far fa-heart"></i>チルいいね！</p></label>
-          <%= button_to 'いいねを取り消す', post_like_path(@post), id: "likes",method: :delete, remote: true  %>
-          </div>
-        <% else %>
-          <div class="likes_button mb-3 ml-3">
-        <label for="likes"><p><i class="far fa-heart mr-2"></i>チルいいね！</p></label>
-        <%= button_to 'いいね', post_likes_path(@post) , id:"likes", remote: true %>
-           </div>
-          <% end %>
-          <% end %>
-      
+<div class="likes_buttons">
+        <%= render partial: "likes/like", locals: { post:@post } %>
         </div>
+
         <p class="detail__text spot_name">スポット名：<%= @post.name%></p>
         <p class="detail__text spot_description"><%= @post.description%></p>
         <p class="detail__text spot_address">所在地：<%= @post.address%></p>
@@ -30,7 +17,7 @@
         <div class="actions mt-5">
             <div class="field mt-5 comment_form">
                 <%= f.label :text ,"コメントする" ,class:"mr-3"%>
-                <%= f.text_field :text, autofocus: true, autocomplete: "name",class:"mr-3 comment_textarea"%>
+                <%= f.text_field :text,  autocomplete: "name",class:"mr-3 comment_textarea"%>
                 <%= f.submit "投稿" ,class:"mr-3"%>
         </div>
         </div>

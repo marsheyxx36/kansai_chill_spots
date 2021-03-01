@@ -6,8 +6,11 @@ class User < ApplicationRecord
   validates :nickname, presence: true, uniqueness: true
   has_many :posts
   has_many :likes, dependent: :destroy
-  has_many :liked_posts, through: :likes, source: :post
-  def already_liked?(post)
-    self.likes.exists?(post_id: post.id)
+  # def already_liked?(post)
+  #   self.likes.exists?(post_id: post.id)
+  # end
+
+  def liked_by?(post_id)
+    likes.where(post_id: post_id).exists?
   end
 end

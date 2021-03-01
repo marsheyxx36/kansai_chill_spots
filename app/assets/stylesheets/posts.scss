@@ -8,6 +8,10 @@ a.btn-border {
     text-decoration: inherit;
   }
 
+a{
+    text-decoration: none;
+}
+
 .top-image{
  width:100%;
  font-family: 'Noto Serif JP', serif;
@@ -135,16 +139,24 @@ text-align: left;
     font-size: 20px;
     padding-top: 10px;
 }
-.likes_button{
-    width: 28%;
+.likes_buttons{
+    width: 70%;
     height:49px;
-    display: flex;
-    border:1px solid #c8c8c8;
+    margin: 0 auto;
     border-radius: 10px;
-    padding-left: 10px;
     padding-top: 5px;
+    color: red;
 }
 
+.like_button{
+    width: 300px;
+}
+
+
+.like_count{
+    color: #e82a2a;
+    font-size: 30px;
+}
 .comments_all{
     font-weight: bold;
     font-size: 30px;

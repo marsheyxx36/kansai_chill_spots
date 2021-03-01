@@ -4,8 +4,10 @@ Rails.application.routes.draw do
 
   root to: 'posts#index'
   resources :posts do
+    # resource :likes, only: [:create, :destroy]
     resources :comments
-    resources :likes, only: [:create, :destroy]
   end
+  post 'like/:id' => 'likes#create', as: 'create_like'
+  delete 'like/:id' => 'likes#destroy', as: 'destroy_like'
    
 end

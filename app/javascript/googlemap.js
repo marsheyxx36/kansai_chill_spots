@@ -3,9 +3,31 @@ let map
 let geocoder
 // 下の1行を追加 
 const display = document.getElementById('display')
-
 var url = location.href ;
-if(document.URL.match("new")) {
+var url2 =url.slice(22);
+console.log(url2)
+if(url2.match(/\d{2,4}/)) {
+
+  let position = document.getElementById('position_show')
+  let position2 = document.getElementById('position_show2')
+  console.log(Number(position.innerHTML))
+  function initMap(){
+    geocoder = new google.maps.Geocoder()
+  
+    map = new google.maps.Map(document.getElementById('map'), {
+      center: {lat:Number(position.innerHTML), lng:Number(position2.innerHTML)},
+      zoom: 16,
+    });
+  
+    marker = new google.maps.Marker({
+      position:{lat:Number(position.innerHTML), lng:Number(position2.innerHTML)},
+      map: map
+    });
+  }
+  initMap();
+  
+
+}else{
   function initMap(){
     geocoder = new google.maps.Geocoder()
   
@@ -49,27 +71,8 @@ if(document.URL.match("new")) {
   button.addEventListener('click', function() {
     codeAddress();
   });
-  
 
-}else{
 
-  let position = document.getElementById('position_show')
-  let position2 = document.getElementById('position_show2')
-  console.log(Number(position.innerHTML))
-  function initMap(){
-    geocoder = new google.maps.Geocoder()
-  
-    map = new google.maps.Map(document.getElementById('map'), {
-      center: {lat:Number(position.innerHTML), lng:Number(position2.innerHTML)},
-      zoom: 16,
-    });
-  
-    marker = new google.maps.Marker({
-      position:{lat:Number(position.innerHTML), lng:Number(position2.innerHTML)},
-      map: map
-    });
-  }
-  initMap();
 }
 
 
