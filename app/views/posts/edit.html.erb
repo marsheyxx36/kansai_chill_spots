@@ -17,13 +17,15 @@ div class="container">
   
   <div class="field mt-5">
     <%= f.label :address,"スポットの住所" %>
-    <%= f.text_field :address, id:"address" , value: "" %>
+    <%= f.text_field :address, id:"address" ,  autocomplete: "address" %>
   </div>
   <p style="color: red;"><%= @post.errors.full_messages_for(:address).first %>
   
-  <%= f.hidden_field :latitude, id:"latitude" , value: "" %>
-  <%= f.hidden_field :longitude, id:"longitude" , value: "" %>
+  <%= f.hidden_field :latitude, id:"latitude" , autocomplete: "latitude" %>
+  <%= f.hidden_field :longitude, id:"longitude" , autocomplete: "longitude" %>
 
+  <p id="position_show"><%= @post.latitude%></p>
+  <p id="position_show2"><%= @post.longitude%></p>
 
     <input type="button" value="マップで検索" id="map_search">
 <p style="color: red;"><%= @post.errors.full_messages_for(:latitude).first %>
@@ -38,7 +40,7 @@ div class="container">
    <p style="color: red;"><%= @post.errors.full_messages_for(:image).first %>
 
   <div class="actions mt-5">
-    <%= f.submit "投稿" %>
+    <%= f.submit "スポットを編集" %>
   </div>
   </div>
 <% end %>
