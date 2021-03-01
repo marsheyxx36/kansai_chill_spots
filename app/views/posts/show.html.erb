@@ -4,7 +4,12 @@
 <div class="likes_buttons">
         <%= render partial: "likes/like", locals: { post:@post } %>
         </div>
-
+ <div class="nav-btn edit_btn">
+          <% if current_user.id== @post.user.id %>
+              <%= link_to "編集する", edit_post_path,class:"btn btn-border"  %>
+              <%= link_to "削除する", post_path(@post),class:"btn btn-border",method: :delete  %>
+            <% end %>
+ </div>
         <p class="detail__text spot_name">スポット名：<%= @post.name%></p>
         <p class="detail__text spot_description"><%= @post.description%></p>
         <p class="detail__text spot_address">所在地：<%= @post.address%></p>

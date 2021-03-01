@@ -1,8 +1,8 @@
 class Post < ApplicationRecord
-    has_one_attached :image
+    has_one_attached :image, dependent: :destroy
     belongs_to :user
     has_many :comments, dependent: :destroy
-    has_many :likes
+    has_many :likes, dependent: :destroy
     validates :name, presence: true
     validates :description, presence: true
     validates :address, presence: true
