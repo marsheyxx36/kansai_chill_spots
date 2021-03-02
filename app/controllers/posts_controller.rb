@@ -4,10 +4,16 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all
+    @parents = Area.all.limit(6)
   end  
 
   def new
     @post = Post.new
+    @category_parent_array = ['---']
+    Area.where(ancestry: nil).each do |parent|
+      @category_parent_array << parent.name 
+    end
+
   end
 
   def create
@@ -17,7 +23,7 @@ class PostsController < ApplicationController
       @post.save
       redirect_to(root_path)
     else
-      render action: "new"
+      redirect_to(new_post_path(@post))
     end
   end
 
@@ -25,6 +31,7 @@ class PostsController < ApplicationController
       @post = Post.find(params[:id])
       @comment = Comment.new
       @comments = @post.comments.includes(:user)
+    
   end
 
 
@@ -49,9 +56,15 @@ class PostsController < ApplicationController
       redirect_to(post_path(@post))
     end
   end  
+
+  def get_category_children
+    @category_children = Area.find("#{params[:parent_id]}").children
+  end
+
  private
 
+
   def post_params
-    params.require(:post).permit(:name,:description,:address, :image,:latitude,:longitude).merge(user_id: current_user.id)
+    params.require(:post).permit(:name,:description,:address, :image,:latitude,:longitude,:area_id).merge(user_id: current_user.id)
   end
 end

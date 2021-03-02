@@ -3,6 +3,8 @@ class Post < ApplicationRecord
     belongs_to :user
     has_many :comments, dependent: :destroy
     has_many :likes, dependent: :destroy
+    belongs_to :area
+
     validates :name, presence: true
     validates :description, presence: true
     validates :address, presence: true

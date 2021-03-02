@@ -14,7 +14,12 @@
     <%= f.text_area :description, autofocus: true, autocomplete: "description" %>
   </div>
   <p style="color: red;"><%= @post.errors.full_messages_for(:description).first %>
-  
+ 
+ <div class="field mt-5">
+   <%= f.label :area_id ,"都道府県"%>
+   <%= f.select :area_id, [['大阪', 1], ['兵庫', 2],['京都', 3],['滋賀', 4],['奈良', 5],['和歌山', 7]], {}, { class:"serect_field",include_blank: "選択してください" } %>
+ <div class="append__category"></div>
+</div>
   <div class="field mt-5">
     <%= f.label :address,"スポットの住所" %>
     <%= f.text_field :address, id:"address" , value: "" %>
@@ -23,7 +28,6 @@
   
   <%= f.hidden_field :latitude, id:"latitude" , value: "" %>
   <%= f.hidden_field :longitude, id:"longitude" , value: "" %>
-
 
     <input type="button" value="マップで検索" id="map_search">
 <p style="color: red;"><%= @post.errors.full_messages_for(:latitude).first %>
