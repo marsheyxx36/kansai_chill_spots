@@ -14,8 +14,8 @@ $(function(){
       $('.append__category').append(childSelectHtml);
     }
 
-    $('#post_area_id').on('change',function(){
-      var parentId = document.getElementById('post_area_id').value;
+    $('#post_prefecture_id').on('change',function(){
+      var parentId = document.getElementById('post_prefecture_id').value;
       if (parentId != ""){
         console.log(parentId)
         $.ajax({
