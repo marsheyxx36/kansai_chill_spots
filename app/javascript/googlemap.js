@@ -37,7 +37,7 @@ if(url2.match(/\d{2,4}/)) {
             position: results[0].geometry.location
         });
         // 下の1行を追加 
-        display.textContent = "検索結果：" + results[ 0 ].geometry.location
+        // display.textContent = "検索結果：" + results[ 0 ].geometry.location
         let location = results[ 0 ].geometry.location
         var lat = location.lat();
         var lng = location.lng();    
@@ -55,6 +55,8 @@ if(url2.match(/\d{2,4}/)) {
     codeAddress();
   });
 
+
+  
 
 
 }else{
@@ -84,7 +86,7 @@ if(url2.match(/\d{2,4}/)) {
             position: results[0].geometry.location
         });
         // 下の1行を追加 
-        display.textContent = "検索結果：" + results[ 0 ].geometry.location
+        //display.textContent = "検索結果：" + results[ 0 ].geometry.location
         let location = results[ 0 ].geometry.location
         var lat = location.lat();
         var lng = location.lng();    

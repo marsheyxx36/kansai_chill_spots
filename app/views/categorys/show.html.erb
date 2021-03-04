@@ -1,0 +1,49 @@
+<div class="show_post">
+  <h1 class="latest-title mb-5"><%= @prefecture.name %>のスポット</h1>
+  <div class="container d-flex">
+    <div class="row rows-cols4">
+      <% @category.each do |category| %>
+        <div class="post col4 ml-5 mr-5">
+          <%= link_to post_path(category.id) , class: "post_link" do%>
+            <div class="image">
+              <%= image_tag category.image ,width:'270px',height:'205px' %>
+            </div>
+            <div class="info">
+              <div class="user-info">
+                <p class="user-name">投稿者：<%= category.user.nickname %></p>
+              </div>
+              <div class="spot-info">
+                <p class="spot-name">スポット名：<%= category.name %></p>
+              </div>
+            </div>
+          <% end %>
+       </div>
+       <% end %>
+    </div>
+  </div>
+</div>
+
+<div class="category">
+  <h1 class="category_title"><%= @prefecture.name%>の市町村から探してみる</h1>
+  <div class="container d-flex">
+    <ul class="category_lists">
+      <div class="row rows-cols2">
+        <%   @category_children.each do  |children|%>
+          <%= link_to area_show_category_path(children.id) , class: "post_link col-2 text-center" do%>
+            <li><%= children.name %></li>
+          <% end %>
+        <% end %>
+      </div>
+    </ul>
+  </div> 
+</div>
+
+<footer>
+  <div class="container">
+    <p class="footer-logo">Kansai_chill_spots</p>
+    <div class="navigation">
+      <p><i class="fas fa-share-square"></i>　お問い合わせ</p>
+      <p class="copyright">©KOUHEI-MASUDA</p>
+    </div>
+  </div>
+</footer>
