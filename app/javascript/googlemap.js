@@ -56,6 +56,8 @@ if(url2.match(/\d{2,4}/)) {
   });
 
 
+  
+
 
 }else{
   function initMap(){
