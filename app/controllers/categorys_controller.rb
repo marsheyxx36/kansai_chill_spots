@@ -1,12 +1,14 @@
 class CategorysController < ApplicationController
     def show
-    @areas =  Area.find("#{params[:id]}").children
-    
-    @areas.each do  |area|
-     @posts = []
-     @post = Post.where(area_id: area.id)
-     @posts << @post
+    @prefecture = Area.find(params[:id])
+    @category =  Post.where(prefecture_id: "#{params[:id]}")
+    @category_children = Area.find("#{params[:id]}").children
     end
-    binding.pry
+
+    def area_show
+        @area = Area.find(params[:id])
+        @category =  Post.where(area_id: "#{params[:id]}")
+        @category_children = Area.find("#{params[:id]}").parent.children
+        @prefecture = Area.find(params[:id]).parent
     end
 end

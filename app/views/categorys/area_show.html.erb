@@ -1,5 +1,5 @@
 <div class="show_post">
-  <h1 class="latest-title mb-5"><%= @prefecture.name %>のスポット</h1>
+  <h1 class="latest-title mb-5"><%= @area.name %>のスポット</h1>
   <div class="container d-flex">
     <div class="row rows-cols4">
       <% @category.each do |category| %>
@@ -22,6 +22,7 @@
     </div>
   </div>
 </div>
+
 
 <div class="category">
   <h1 class="category_title"><%= @prefecture.name%>の市町村から探してみる</h1>

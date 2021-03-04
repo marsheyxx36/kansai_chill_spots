@@ -89,7 +89,6 @@ a{
     background-color:#dcdcdc;
     font-family: 'Kosugi', sans-serif;
     font-family: 'Noto Sans JP', sans-serif;
-
 }
 
 .latest-title{
@@ -99,7 +98,7 @@ a{
 
 .post{
     width:270px;
-    height:350px;
+    height:400px;
 }
 
 .post_link{
@@ -113,7 +112,7 @@ a{
 }
 .info{
     width: 270px;
-    height:75px;
+    height:110px;
     background-color: white;
 }
 
@@ -131,8 +130,6 @@ footer{
     padding-top:3%;
     background-color: black;
     color: white;
-    
-    
 }
 .footer-logo{
     font-size:35px;
@@ -312,8 +309,7 @@ input[type="text"] {
 
 .category{
     width: 100%;
-    height:300px;
-
+    height:auto;
     
 }
 
@@ -326,19 +322,28 @@ input[type="text"] {
 }
 
 .category_lists{
-
     list-style: none;
-    margin: 0 auto;
+    margin: 100px auto 100px; 
     display: flex;
     text-align: center;
+
 }
 
 ul li{
-    margin: 50px 30px;
-    font-size: 20px;
+    width: 150px;
+    margin-top: 30px;
+    font-size: 18px;
 }
 
-.category_list{
+.post_link li{
+    text-align: center;
+}
 
 
+.show_post{
+    
+    background-color:#dcdcdc;
+    font-family: 'Kosugi', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
+    padding-top: 50px;
 }
