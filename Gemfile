@@ -65,3 +65,7 @@ gem 'pry-rails'
 gem "font-awesome-sass"
 gem 'jquery-rails'
 gem 'ancestry'
+gem 'devise'
+gem 'omniauth-facebook'
+gem 'omniauth-twitter'
+gem 'omniauth-google-oauth2'
