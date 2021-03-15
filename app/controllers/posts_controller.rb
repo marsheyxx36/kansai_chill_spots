@@ -4,21 +4,20 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all
     @parents = Area.all.limit(6)
-  end  
+  end
 
   def new
     @post = Post.new
     @category_parent_array = ['---']
     Area.where(ancestry: nil).each do |parent|
-      @category_parent_array << parent.name 
+      @category_parent_array << parent.name
     end
-
   end
 
   def create
     @post = Post.new(post_params)
-    
-    if  @post.valid?
+
+    if @post.valid?
       @post.save
       redirect_to(root_path)
     else
@@ -27,12 +26,10 @@ class PostsController < ApplicationController
   end
 
   def show
-      @post = Post.find(params[:id])
-      @comment = Comment.new
-      @comments = @post.comments.includes(:user)
-    
+    @post = Post.find(params[:id])
+    @comment = Comment.new
+    @comments = @post.comments.includes(:user)
   end
-
 
   def edit
     @post =  Post.find(params[:id])
@@ -46,24 +43,24 @@ class PostsController < ApplicationController
       render :edit
     end
   end
- 
+
   def destroy
-    @post =  Post.find(params[:id])
+    @post = Post.find(params[:id])
     if @post.destroy
-    redirect_to(root_path)
+      redirect_to(root_path)
     else
       redirect_to(post_path(@post))
     end
-  end  
-
-  def get_category_children
-    @category_children = Area.find("#{params[:parent_id]}").children
   end
 
- private
+  def get_category_children
+    @category_children = Area.find(params[:parent_id].to_s).children
+  end
 
+  private
 
   def post_params
-    params.require(:post).permit(:name,:description,:address, :image,:latitude,:longitude,:area_id,:prefecture_id).merge(user_id: current_user.id)
+    params.require(:post).permit(:name, :description, :address, :image, :latitude, :longitude, :area_id,
+                                 :prefecture_id).merge(user_id: current_user.id)
   end
 end
