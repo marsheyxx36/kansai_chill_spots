@@ -1,6 +1,12 @@
 <div class="container">
 <div class="form-style-6 mt-5">
 <h2 >ログイン</h2>
+<%= button_to  user_facebook_omniauth_authorize_path,class:'btn type09', method: :post do %>
+  <i class="fab fa-facebook-square fa-2x mr-3"></i><span class="sns_login">Facebookでログイン</span>
+<% end %>
+<%= button_to  user_google_oauth2_omniauth_authorize_path,class:'btn type08', method: :post do %>
+  <i class="fab fa-google fa-2x mr-4"></i><span class="sns_login">Googleでログイン</span>
+<% end %>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field mt-5">
@@ -25,8 +31,9 @@
   <div class="actions mt-5">
     <%= f.submit "Log in" %>
   </div>
+
+  
 <% end %>
 
-<%# <%= render "users/shared/links" %> 
 </div>
 </div>

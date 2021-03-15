@@ -1,6 +1,12 @@
 <div class="container">
 <div class="form-style-6 mt-5 user-form">
 <h2>新規登録</h2>
+<%= button_to  user_facebook_omniauth_authorize_path,class:'btn type09', method: :post do %>
+  <i class="fab fa-facebook-square fa-2x mr-3"></i><span class="sns_login">Facebookで登録</span>
+<% end %>
+<%= button_to  user_google_oauth2_omniauth_authorize_path,class:'btn type08', method: :post do %>
+  <i class="fab fa-google fa-2x mr-4"></i><span class="sns_login">Googleで登録</span>
+<% end %>
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
  
 <%= render 'layouts/error_messages', model: f.object %>
@@ -10,6 +16,9 @@
   </div>
 
   <div class="field mt-5">
+   <%if @sns_id.present? %>
+      <%= hidden_field_tag :sns_auth, true %>
+ <% else %>
     <%= f.label :password ,"パスワード"%>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> 文字以上の半角英数字で入力してください)</em>
@@ -21,16 +30,24 @@
     <%= f.label :password_confirmation,"確認のためパスワードをもう一度入力してください" %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
-
+ <% end %>
    <div class="field mt-5">
         <%= f.label :nickname %>
         <%= f.text_field :nickname, autofocus: true, maxlength: "6" %>
       </div>
+ 
+
 
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
+
+
+
+
+
   </div>
+
+  
 <% end %>
-<%= render "devise/shared/links" %>
-</div>
+
