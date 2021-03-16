@@ -19,7 +19,8 @@ div class="container">
    <%= f.label :prefecture_id ,"都道府県"%>
    <%= f.select :prefecture_id, [['----'],['大阪', 1], ['兵庫', 2],['京都', 3],['滋賀', 4],['奈良', 5],['和歌山', 7]], {}, { class:"serect_field",include_blank: "選択してください" } %>
  <div class="append__category">
- 
+ <div id="children_wrapper">
+  <%= f.select :prefecture_id, @post.area.parent.children.map{ |area| [area.name, area.id] }, {}, { class:"serect_field",include_blank: "選択してください" ,selected: @post.area_id } %>
  </div>
 </div>
   
