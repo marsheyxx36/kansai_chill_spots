@@ -36,8 +36,16 @@
         <%= f.text_field :nickname, autofocus: true, maxlength: "6" %>
       </div>
  
+   <div class="field mt-5">
+        <%= f.label :image,"スポットの画像" %> <br>
+        <%= f.file_field :image, autofocus: true, autocomplete: "image" %>
+   </div>
 
 
+ <div class="field mt-5">
+        <%= f.label :profile%>
+        <%= f.text_field :profile, autofocus: true %>
+      </div>
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>

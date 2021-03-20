@@ -8,6 +8,7 @@ class User < ApplicationRecord
   has_many :likes, dependent: :destroy
   has_many :comments, dependent: :destroy
   has_many :sns_credentials
+  has_one_attached :image, dependent: :destroy
   # def already_liked?(post)
   #   self.likes.exists?(post_id: post.id)
   # end

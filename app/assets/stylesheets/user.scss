@@ -83,3 +83,37 @@
 .user-form{
     margin-top: 100px;
 }
+
+.user_image{
+	display: flex;
+	margin:100px auto 30px;
+	width:60%;
+}
+
+ .user_avatar{
+	width: 180px;
+	height: 180px;
+	border-radius: 100px;
+  }
+
+.introduction{
+	font-size: 20px;
+	width:60%;
+	margin: 30px auto;
+}
+
+.user_profile{
+	border:1px solid #c8c8c8;
+    border-radius: 5px;
+    height: 150px;
+    padding: 10px;
+    font-size: 15px;
+    width: 60%;
+	margin:10px auto 80px;
+}
+
+.user_nickname{
+	margin-top: 80px;
+	margin-left: 50px;
+	font-size: 20px;
+}
