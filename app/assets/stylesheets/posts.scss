@@ -88,6 +88,7 @@ a.btn-border {
     border: 2px solid #000000;
     border-radius: 3;
     text-decoration: inherit;
+    margin:0 5px;
   }
 
 a{
@@ -152,6 +153,11 @@ a{
     width: 230px;
     height:110px;
     background-color: white;
+}
+
+.user_path{
+    text-decoration: none;
+    color: inherit;
 }
 
 .user-info{

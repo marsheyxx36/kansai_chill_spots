@@ -42,7 +42,7 @@ class PostsController < ApplicationController
     if @post.update(post_params)
       redirect_to(post_path(@post))
     else
-      @post =  Post.find(params[:id])
+      @post = Post.find(params[:id])
       render :edit
     end
   end

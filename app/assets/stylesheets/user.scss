@@ -84,16 +84,68 @@
     margin-top: 100px;
 }
 
+.user_menu{
+	margin-top: 4px;
+	margin-left: 10px;
+	color: white;
+}
+
+.user_edit_btn{
+    width:100%;
+	height: 100px;
+    height:auto;
+    display: block;
+	text-align: left;
+	padding-left: 220px;
+}
+
+
+.nav-btn{
+    width:400px;
+    display: flex;
+}
+
 .user_image{
 	display: flex;
 	margin:100px auto 30px;
 	width:60%;
+
 }
 
+.dropdwn_menu{
+    width: 50%;
+	height:50px;
+    display: none;
+    position: absolute;
+    margin-left: -5px;
+    margin-top: 5px;
+    padding: 0;
+    background:white;
+	color: black;
+	border: #000 1px solid;
+}
+
+.drop_menu > a{
+	text-decoration: none;
+	color: black;
+	
+}
+
+.drop_menu{
+	margin: 10px;
+	width: 100%;
+	
+}
  .user_avatar{
 	width: 180px;
 	height: 180px;
 	border-radius: 100px;
+  }
+
+  .user_avatar2{
+	width: 30px;
+	height: 30px;
+	border-radius: 20px;
   }
 
 .introduction{
@@ -101,6 +153,8 @@
 	width:60%;
 	margin: 30px auto;
 }
+
+
 
 .user_profile{
 	border:1px solid #c8c8c8;
@@ -116,4 +170,12 @@
 	margin-top: 80px;
 	margin-left: 50px;
 	font-size: 20px;
+}
+
+.dummy_data{
+	width:100%;
+	height: 150px;
+	margin: 0 auto;
+	text-align: center;
+
 }
