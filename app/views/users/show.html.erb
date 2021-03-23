@@ -1,16 +1,30 @@
 <div class="container">
     <div class="user_image">
+     <% if @user.image.present? %>
      <%= image_tag @user.image ,class:'user_avatar' %>
+     <% else %>
+      <%= image_tag 'm_e_others_501.png' ,class:'user_avatar' %>
+     <% end %>
      <h1 class="user_nickname"> <%= @user.nickname %></h1>
      </div>
     <div class="user_edit_btn">
         <% if user_signed_in?%>
           <% if current_user.id== @user.id %>
-              <%= link_to "Edit Profile", edit_user_registration_path,class:"btn btn-border edit_profile"  %>
+              <%= link_to "Edit Profile", edit_user_path,class:"btn btn-border edit_profile"  %>
+              <% unless current_user.sns_credentials.present? %>
+              <%= link_to "パスワード変更",  edit_user_registration_path,class:"btn btn-border edit_profile"  %>
+              <% end %>
               <%= link_to "ログアウト", destroy_user_session_path, method: :delete,class:"btn btn-border"  %>
             <% end %>
         <% end %>
     </div>
+
+    
+
+    <div>
+ <%= render "follow_form" %>
+  </div>
+
      <h2 class="introduction">自己紹介：</h2>
       
      <p class="user_profile"><%= @user.profile%></p>

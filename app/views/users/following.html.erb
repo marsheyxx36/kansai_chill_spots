@@ -1,0 +1,14 @@
+<div class="container">
+<h2 class="follow_title"><%= @user.nickname%>さんのフォロー</h2>
+
+<ul class="follow_lists">
+   <% @users.each do  |user|%>
+   <li class="follow_list">
+    <%= image_tag user.image ,class:'user_avatar3' %>
+    <p class="follow_name"> <%= user.nickname%></p>
+     <p class="follow_profile"> <%= user.profile%></p>
+    </li>
+   <% end %>
+
+</ul>
+</div>
