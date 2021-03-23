@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'users/show'
   devise_for :users , controllers: {
     omniauth_callbacks: 'users/omniauth_callbacks',
     registrations: 'users/registrations'
@@ -27,5 +28,6 @@ Rails.application.routes.draw do
   post 'like/:id' => 'likes#create', as: 'create_like'
   delete 'like/:id' => 'likes#destroy', as: 'destroy_like'
    
+  resources :users, only: [:show ,:edit,:update]
 
 end

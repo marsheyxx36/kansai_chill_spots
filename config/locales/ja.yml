@@ -14,3 +14,5 @@ ja:
         address: 住所
         latitude: 住所
         image: 画像
+        prefecture_id: 都道府県
+        area_id: 市町村

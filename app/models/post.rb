@@ -11,6 +11,8 @@ class Post < ApplicationRecord
   validates :latitude, presence: { message: 'を入力し、上のマップ検索ボタンでマップの場所を特定してください' }
   validates :longitude, presence: true
   validates :image, presence: true
+  validates :prefecture_id , numericality: { other_than: 1 , message: 'を選択してください' } 
+  validates :area_id , numericality: { other_than: 1 , message: 'を選択してください' } 
 
   # def image_presence
   #     unless image.attached?

@@ -5,7 +5,10 @@
 <%= form_with(model: @user, local: true) do |f| %>
  
 <%= render 'layouts/error_messages', model: f.object %>
-
+  <div class="field mt-5">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
 
   <div class="field mt-5">
 <%if current_user.sns_credentials.present? %>

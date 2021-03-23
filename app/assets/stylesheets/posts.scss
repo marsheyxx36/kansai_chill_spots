@@ -86,13 +86,15 @@ a.btn-border {
     color: inherit;
     background: #fff;
     border: 2px solid #000000;
-    border-radius: 0;
+    border-radius: 3;
     text-decoration: inherit;
+    margin:0 5px;
   }
 
 a{
     text-decoration: none;
 }
+
 
 .top-image{
  width:100%;
@@ -149,6 +151,11 @@ a{
     width: 230px;
     height:110px;
     background-color: white;
+}
+
+.user_path{
+    text-decoration: none;
+    color: inherit;
 }
 
 .user-info{
@@ -209,7 +216,8 @@ text-align: left;
 .edit_btn{
     width:70%;
        height:auto;
-       margin:  0px auto 50px;
+       margin-left: 160px;
+       margin-top: 50px;
        display: block;
 
 }

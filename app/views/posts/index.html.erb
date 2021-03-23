@@ -16,7 +16,9 @@
               </div>
               <div class="info">
                 <div class="user-info">
+                 <%= link_to user_path(post.user.id) ,class:"user_path" do %>
                   <p class="user-name">投稿者：<%= post.user.nickname %></p>
+                <%end%>
                 </div>
                 <div class="spot-info">
                    <p class="spot-name">スポット名：<%= post.name %></p>

@@ -34,12 +34,18 @@ $(function(){
           appendChildrenBox(insertHTML);
         })
         .fail(function(){
+          if(parentId !='----'){
           window.alert('カテゴリー取得に失敗しました');
+          }else{
+            $('#children_wrapper').remove();
+          }
         })
       }else{
         $('#children_wrapper').remove();
         $('#grandchildren_wrapper').remove();
       }
     });
+
+  
   });
   
