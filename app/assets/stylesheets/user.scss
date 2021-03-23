@@ -140,6 +140,7 @@
 	width: 180px;
 	height: 180px;
 	border-radius: 100px;
+	border: rgb(212, 209, 209) 1px solid;
   }
 
   .user_avatar2{
@@ -147,6 +148,7 @@
 	height: 30px;
 	border-radius: 20px;
 	background-color: #fff;
+	border: rgb(212, 209, 209) 1px solid;
   }
 
   .user_avatar3{
@@ -154,6 +156,7 @@
 	height: 50px;
 	border-radius: 40px;
 	background-color: #fff;
+	border: rgb(212, 209, 209) 1px solid;
   }
 
 
@@ -176,9 +179,17 @@
 }
 
 .user_nickname{
-	margin-top: 80px;
+	margin-top: 10px;
 	margin-left: 50px;
 	font-size: 20px;
+}
+
+.user_path2{
+	width: 20%;
+	padding-top: 10px;
+	color: inherit;
+	text-decoration: none;
+	margin-left: 50px;
 }
 
 .dummy_data{
@@ -225,11 +236,6 @@ width: 60%;
 	// border-top: rgb(212, 209, 209) 1px solid;
 	border-bottom: rgb(212, 209, 209) 1px solid;
 	
-}
-.follow_name{
-width: 20%;
-margin-left: 50px;
-margin-top: 10px;
 }
 
 .follow_profile{
