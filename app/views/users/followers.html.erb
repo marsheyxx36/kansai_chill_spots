@@ -4,9 +4,15 @@
 <ul class="follow_lists">
    <% @users.each do  |user|%>
    <li class="follow_list">
+   <%= link_to user_path(user.id) ,class:"user_path2" do %>
+   <div class="user_follow">
+   <%if user.image.present?%>
     <%= image_tag user.image ,class:'user_avatar3' %>
-     <%= link_to user_path(user.id) ,class:"user_path2" do %>
+   <%else%>
+<%= image_tag 'noimage1.png' ,class:'user_avatar3' %>
+ <%end%>
     <p class="follow_name"> <%= user.nickname%></p>
+    </div>
     <%end%>
      <p class="follow_profile"> <%= user.profile%></p>
     </li>
