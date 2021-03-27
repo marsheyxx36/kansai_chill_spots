@@ -2,12 +2,12 @@
 <div class="follow_count">
 <div class="follower">
       <%= link_to followers_user_path(@user.id) do %>
-          <h5 class="follo_count">フォロワー<%= @user.followers.count %></h5>
+          <h5 style="color: black;">フォロワー<%= @user.followers.count %></h5>
       <% end %>
   </div>
   <div class="follow">
       <%= link_to following_user_path(@user.id) do %>
-                <h5 class="follo_count">フォロー<%= @user.following.count %></h5>
+                <h5 style="color: black;">フォロー<%= @user.following.count %></h5>
       <% end %>
   </div>
 </div>
