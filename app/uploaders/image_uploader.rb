@@ -1,1 +1,0 @@
-process resize_to_limit: [180, 180]
