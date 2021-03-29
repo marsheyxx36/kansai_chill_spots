@@ -1,5 +1,5 @@
 class AddPrefectureIdToPost < ActiveRecord::Migration[6.0]
   def change
-    add_column :posts, :prefecture_id, :integer,null: false
+    add_reference :posts, :prefecture, null: false, foreign_key: true
   end
 end
