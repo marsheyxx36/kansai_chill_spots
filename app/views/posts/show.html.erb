@@ -13,6 +13,7 @@
         <% end %>
  </div>
         <p class="detail__text spot_name">スポット名：<%= @post.name%></p>
+         <p class="detail__text spot_name">投稿者：<%= @post.user.nickname%></p>
         <p class="detail__text spot_description"><%= @post.description%></p>
         <p class="detail__text spot_name">所在地：<%= @post.area.parent.name%>/<%= @post.area.name%></p>
         <p class="detail__text spot_address">住所：<%= @post.address%></p>

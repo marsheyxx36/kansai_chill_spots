@@ -95,6 +95,10 @@ a{
     text-decoration: none;
 }
 
+input[type="textarea"] {
+    width: 400px;
+    height: 300px;
+}
 
 .top-image{
  width:100%;
@@ -156,6 +160,8 @@ a{
 .user_path{
     text-decoration: none;
     color: inherit;
+    width:20%;
+   
 }
 
 .user-info{
@@ -389,4 +395,14 @@ ul li{
     font-family: 'Kosugi', sans-serif;
     font-family: 'Noto Sans JP', sans-serif;
     padding-top: 50px;
+}
+
+.post_image{
+    width: 400px;
+    height: 400px;
+}
+
+.post_form{
+    width: 70%;
+    margin: 0;
 }

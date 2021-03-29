@@ -84,6 +84,10 @@
     margin-top: 100px;
 }
 
+#myfile{
+ display: none;
+}
+
 .user_menu{
 	margin-top: 4px;
 	margin-left: 10px;
@@ -140,13 +144,25 @@
 	width: 180px;
 	height: 180px;
 	border-radius: 100px;
+	border: rgb(212, 209, 209) 1px solid;
   }
 
   .user_avatar2{
 	width: 30px;
 	height: 30px;
 	border-radius: 20px;
+	background-color: #fff;
+	border: rgb(212, 209, 209) 1px solid;
   }
+
+  .user_avatar3{
+	width: 50px;
+	height: 50px;
+	border-radius: 40px;
+	background-color: #fff;
+	border: rgb(212, 209, 209) 1px solid;
+  }
+
 
 .introduction{
 	font-size: 20px;
@@ -167,11 +183,27 @@
 }
 
 .user_nickname{
-	margin-top: 80px;
+	margin-top: 10px;
 	margin-left: 50px;
 	font-size: 20px;
 }
 
+.user_path2{
+	width: 30%;
+	padding-top: 10px;
+	color: inherit;
+	text-decoration: none;
+	margin-left: 50px;
+}
+
+.user_follow{
+	display: flex;
+}
+
+.follow_name{
+	margin-top: 10px;
+	margin-left: 30px;
+}
 .dummy_data{
 	width:100%;
 	height: 150px;
@@ -179,3 +211,49 @@
 	text-align: center;
 
 }
+
+.follow_form{
+	margin: 0 auto;
+	width: 60%;
+	font-family: 'Kosugi', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+.follow_count{
+display: flex;
+}
+
+.follow{
+	margin-left:10px;
+}
+.follow_title{
+	margin-top: 100px;
+	margin: 100px auto 0;
+	width: 60%;
+	padding-bottom: 30px;
+	border-bottom: rgb(212, 209, 209) 1px solid;
+}
+.follower{
+	margin-bottom: 10px;
+}
+.follow_lists{
+margin: 0 auto;
+width: 60%;
+}
+
+.follow_list{
+	display: flex;
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 30px;
+	// border-top: rgb(212, 209, 209) 1px solid;
+	border-bottom: rgb(212, 209, 209) 1px solid;
+	
+}
+
+.follow_profile{
+	width: 40%;
+	margin-left: 200px;
+	margin-top: 10px;
+	color: rgb(161, 149, 149);
+	font-size: 15px;
+	}

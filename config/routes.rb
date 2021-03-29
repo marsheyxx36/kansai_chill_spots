@@ -28,6 +28,18 @@ Rails.application.routes.draw do
   post 'like/:id' => 'likes#create', as: 'create_like'
   delete 'like/:id' => 'likes#destroy', as: 'destroy_like'
    
-  resources :users, only: [:show ,:edit,:update]
+  resources :users, only: [:show ,:edit,:update]do
+    collection do
+     get 'edit_password'
+      put 'update_password'
+    end
+
+    member do
+      get :following, :followers
+    end
+
+  end
+
+  resources :relationships, only: [:create, :destroy]
 
 end

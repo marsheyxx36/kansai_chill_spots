@@ -1,0 +1,20 @@
+<div class="follow_form">
+<div class="follow_count">
+<div class="follower">
+      <%= link_to followers_user_path(@user.id) do %>
+          <h5 style="color: black;">フォロワー<%= @user.followers.count %></h5>
+      <% end %>
+  </div>
+  <div class="follow">
+      <%= link_to following_user_path(@user.id) do %>
+                <h5 style="color: black;">フォロー<%= @user.following.count %></h5>
+      <% end %>
+  </div>
+</div>
+
+<%= form_for(current_user, url: relationships_path, method: :post, remote: true) do |f| %>
+  <%= hidden_field_tag :following_id, @user.id %>
+  <%= f.submit "フォローする", class: "btn btn-outline-secondary" %>
+<% end %>
+
+</div>

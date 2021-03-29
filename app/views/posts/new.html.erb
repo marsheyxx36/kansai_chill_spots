@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="form-style-6 mt-5 user-form">
+  <div class="form-style-6 mt-5 post_form">
     <h2>スポット投稿</h2>
     <%= form_with(model: @post, local: true) do |f| %>
    <%# <%= render 'layouts/error_messages', model: f.object %> 
@@ -20,8 +20,10 @@
    <%= f.select :prefecture_id, [['----'],['大阪', 1], ['兵庫', 2],['京都', 3],['滋賀', 4],['奈良', 5],['和歌山', 7]], {}, { class:"serect_field",include_blank: "選択してください" } %>
  <div class="append__category"></div>
 </div>
-  <p style="color: red;"><%= @post.errors.full_messages_for(:prefecture_id).first %>
-  <p style="color: red;"><%= @post.errors.full_messages_for(:area_id).first %>
+  <p style="color: red;">
+
+          <%= @post.errors.full_messages_for(:prefecture_id).first %></p>
+  <p style="color: red;"><%= @post.errors.full_messages_for(:area_id).first %></p>
   <div class="field mt-5">
     <%= f.label :address,"スポットの住所" %>
     <%= f.text_field :address, id:"address" , value: "" %>
@@ -39,8 +41,13 @@
 
    <div class="field mt-5">
         <%= f.label :image,"スポットの画像" %> <br>
-        <%= f.file_field :image, autofocus: true, autocomplete: "image" %>
+        <%= f.file_field :image, autofocus: true, autocomplete: "image" ,id:'myfile'%>
    </div>
+   <label for="myfile">
+    <%= image_tag 'm_e_others_501.png',id:"img1",class:'post_image' %>
+    <i class="fas fa-plus-square fa-2x ml-1"></i>
+  </label>
+
    <p style="color: red;"><%= @post.errors.full_messages_for(:image).first %>
 
   <div class="actions mt-5">
