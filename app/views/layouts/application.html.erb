@@ -12,12 +12,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Kosugi&family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet">  
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
 
   <body>
-    <nav class="navbar navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-dark bg-dark fixed-top　navbar-pc">
       <div class="container-fluid">
+      
             <a class="navbar-brand" href="/">Kansai_chill_spots</a>
+        
         <div class="nav-btn">
           <% if user_signed_in? %>
               <%= link_to "ログアウト", destroy_user_session_path, method: :delete,class:"btn btn-border"  %>

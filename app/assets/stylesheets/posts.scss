@@ -50,6 +50,40 @@ table {
 }
 //ここまでリセットCSS
 
+.category_title {
+font-size: 20px;
+}
+
+@media screen and (max-width: 480px) { 
+ 
+    .latest-title{
+        font-size: 30px;
+    }
+
+    .catch-image{
+     width:100%;
+     height:auto;
+     margin-top: 0;
+    }
+
+    .top-image{
+
+        font-family: 'Noto Serif JP', serif;
+        &__catchcopy{
+            display: none;
+        }
+        &__subcatchcopy{
+            display: none;
+        }
+               
+    }
+
+}
+.catch-image{
+    width: 100%;
+    height: auto;
+}
+
 .btn.type08{
     width: 100%;
     max-width: 400px;
@@ -365,7 +399,7 @@ input[type="text"] {
 .category_title{
     text-align: center;
     padding-top: 50px;
-    font-size: 40px;
+
     font-family: 'Kosugi', sans-serif;
     font-family: 'Noto Sans JP', sans-serif;
 }
