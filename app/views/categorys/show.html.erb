@@ -3,20 +3,33 @@
   <div class="container d-flex">
     <div class="row rows-cols4">
       <% @category.each do |category| %>
-        <div class="post col4 ml-5 mr-5">
+        <div class="post col3 ml-5 mr-5">
           <%= link_to post_path(category.id) , class: "post_link" do%>
             <div class="image">
               <%= image_tag category.image ,width:'230px',height:'205px' %>
             </div>
             <div class="info">
-              <div class="user-info">
-                <%= link_to user_path(category.user.id) ,class:"user_path" do %>
-                <p class="user-name">投稿者：<%= category.user.nickname %></p>
-                <% end %>
-              </div>
+             <div class="user-info">
+                 <%= link_to user_path(category.user.id) ,class:"user_path" do %>
+             
+                  <p class="user-name">
+                <% if category.user.image.present? %>
+                  <%= image_tag category.image ,class:'user_avatar2' %>
+                <% else %>
+                  <%= image_tag 'noimage1.png' ,class:'user_avatar2' %>
+               <% end %>
+               <%= category.user.nickname %>
+               </p>
+                <%end%>
+                </div>
               <div class="spot-info">
                 <p class="spot-name">スポット名：<%= category.name %></p>
               </div>
+
+              <div class="spot-info">
+                   <p class="spot-name">所在地：<%= category.area.parent.name %></p>
+                </div>
+
             </div>
           <% end %>
        </div>
