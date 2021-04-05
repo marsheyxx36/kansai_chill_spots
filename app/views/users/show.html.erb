@@ -10,11 +10,11 @@
     <div class="user_edit_btn">
         <% if user_signed_in?%>
           <% if current_user.id== @user.id %>
-              <%= link_to "Edit Profile", edit_user_path,class:"btn btn-border edit_profile"  %>
+              <%= link_to "プロフィールを編集", edit_user_path,class:"btn btn-border edit_profile"  %>
               <% unless current_user.sns_credentials.present? %>
               <%= link_to "パスワード変更",  edit_user_registration_path,class:"btn btn-border edit_profile"  %>
               <% end %>
-              <%= link_to "ログアウト", destroy_user_session_path, method: :delete,class:"btn btn-border"  %>
+              
             <% end %>
         <% end %>
     </div>
@@ -33,7 +33,7 @@
 
   <div class="latest-post">
     
-    <h1 class="latest-title mb-5"><%= @user.nickname %>さんの最新投稿</h1>
+    <h1 class="latest-title mb-5"><%= @user.nickname %>さんの投稿一覧</h1>
     
     <div class="container">
       <div class="row d-flex">

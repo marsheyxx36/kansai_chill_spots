@@ -1,4 +1,12 @@
 <div class="container">
+
+<div class="back_btn">
+<%= link_to user_path(current_user.id) do%>
+<i class="fas fa-arrow-left"></i>戻る
+<%end%>
+</div>
+
+
 <div class="form-style-6 mt-5 user-form">
 <h2>ユーザー情報編集</h2>
 
@@ -13,7 +21,11 @@
 
   <%# <img id="img1" style="width:300px;height:300px;" /> %>
   <label for="myfile">
-    <%= image_tag @user.image ,class:'user_avatar',id:"img1" %>
+     <% if current_user.image.present? %>
+               <%= image_tag current_user.image ,class:'user_avatar',id:"img1"  %>
+               <% else %>
+                <%= image_tag 'noimage1.png' ,class:'user_avatar',id:"img1" %>
+               <% end %>
     <i class="fas fa-plus-square fa-2x ml-1"></i>
   </label>
    <div class="field mt-5">
@@ -23,11 +35,12 @@
  
 
  <div class="field mt-5">
-        <%= f.label :profile%>
-        <%= f.text_field :profile, autofocus: true %>
-      </div>
+        <%= f.label :profile ,'自己紹介'%>
+        <%= f.text_area :profile, autofocus: true, class:"form-control" ,id:"exampleFormControlTextarea1" ,rows:"3" %>
+  </div>
+
   <div class="actions">
-    <%= f.submit "プロフィールを変更" %>
+    <%= f.submit "プロフィールを変更" ,class:"mb-5"%>
   </div>
 
   </div>

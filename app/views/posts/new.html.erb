@@ -1,4 +1,9 @@
 <div class="container">
+<div class="back_btn">
+<%= link_to root_path do%>
+<i class="fas fa-arrow-left"></i>戻る
+<%end%>
+</div>
   <div class="form-style-6 mt-5 post_form">
     <h2>スポット投稿</h2>
     <%= form_with(model: @post, local: true) do |f| %>
