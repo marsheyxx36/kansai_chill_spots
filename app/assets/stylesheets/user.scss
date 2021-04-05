@@ -104,6 +104,15 @@
 	.user_image{
 		margin-top: 10%;
 	}
+
+	.follow_title{
+		font-size: 18px;
+		width: 100%;
+	}
+
+	.follow_lists{
+		width: 100%;
+	}
 }
 
 @media screen and (min-width: 780px) {
@@ -141,6 +150,20 @@
 
 	.follow_form{
 		margin: 0 auto;
+	}
+	.follow_title{
+		width: 60%;
+	}
+	.follow_lists{
+		width: 60%;
+	}
+	.follow_list{
+		display: flex;
+	}
+
+	.follow_profile{
+		margin-left: 200px;
+		width: 40%;
 	}
 }
 .user-form{
@@ -283,7 +306,6 @@ display: flex;
 .follow_title{
 	margin-top: 100px;
 	margin: 100px auto 0;
-	width: 60%;
 	padding-bottom: 30px;
 	border-bottom: rgb(212, 209, 209) 1px solid;
 }
@@ -292,11 +314,11 @@ display: flex;
 }
 .follow_lists{
 margin: 0 auto;
-width: 60%;
+
 }
 
 .follow_list{
-	display: flex;
+	
 	width: 100%;
 	padding-top: 10px;
 	padding-bottom: 30px;
@@ -306,8 +328,8 @@ width: 60%;
 }
 
 .follow_profile{
-	width: 40%;
-	margin-left: 200px;
+
+	// margin-left: 200px;
 	margin-top: 10px;
 	color: rgb(161, 149, 149);
 	font-size: 15px;

@@ -9,7 +9,7 @@ class UsersController < ApplicationController
   def edit
     @user = current_user
   end
-  
+
   def update
     @user = current_user
     if @user.update(user_params)
@@ -31,7 +31,6 @@ class UsersController < ApplicationController
     @followers = @user.follower_user.where.not(id: current_user.id)
   end
 
-
   def edit_password
     @password = current_user
   end
@@ -46,13 +45,13 @@ class UsersController < ApplicationController
   end
 
   def following
-    #@userがフォローしているユーザー
+    # @userがフォローしているユーザー
     @user  = User.find(params[:id])
     @users = @user.following
   end
 
   def followers
-    #@userをフォローしているユーザー
+    # @userをフォローしているユーザー
     @user  = User.find(params[:id])
     @users = @user.followers
   end
@@ -60,8 +59,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:id, :nickname, :image, :profile,:password,:password_confirmation,:current_password)
+    params.require(:user).permit(:id, :nickname, :image, :profile, :password, :password_confirmation, :current_password)
   end
-
-
 end

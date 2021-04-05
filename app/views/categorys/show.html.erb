@@ -26,6 +26,25 @@
 </div>
 
 <div class="category">
+         <h1 class="category_title">都道府県から探してみる</h1>
+
+        <div class="container">
+         
+           <div class="container d-flex">
+         
+          
+                   <ul class="category_lists">
+           <% @parents.each do  |parent|%>
+            <%= link_to category_path(parent.id) , class: "post_link" do%>
+          <li><%= parent.name %></li>
+          <% end %>
+          <% end %>
+           </ul>
+      </div> 
+        </div>
+      </div>
+
+<div class="category">
   <h1 class="category_title"><%= @prefecture.name%>の市町村から探してみる</h1>
   <div class="container d-flex">
     <ul class="category_lists">
