@@ -29,9 +29,9 @@
   <h1 class="category_title"><%= @prefecture.name%>の市町村から探してみる</h1>
   <div class="container d-flex">
     <ul class="category_lists">
-      <div class="row rows-cols2">
+      <div class="row rows-cols2 ">
         <%   @category_children.each do  |children|%>
-          <%= link_to area_show_category_path(children.id) , class: "post_link col-2 text-center" do%>
+          <%= link_to area_show_category_path(children.id) , class: "post_link col-6-sm text-center" do%>
             <li><%= children.name %></li>
           <% end %>
         <% end %>

@@ -9,7 +9,7 @@
           <div class="container">
            <div class="row d-flex">
             <% @posts.each do |post| %>
-              <div class="post col4 ml-5 col-xs-6">
+              <div class="post col3 ml-5 col-xs-6">
               <%= link_to post_path(post.id) , class: "post_link" do%>
               <div class="image">
                 <%= image_tag post.image ,width:'230px',height:'205px' %>
@@ -17,7 +17,15 @@
               <div class="info">
                 <div class="user-info">
                  <%= link_to user_path(post.user.id) ,class:"user_path" do %>
-                  <p class="user-name">投稿者：<%= post.user.nickname %></p>
+             
+                  <p class="user-name">
+                <% if post.user.image.present? %>
+                  <%= image_tag post.user.image ,class:'user_avatar2' %>
+                <% else %>
+                  <%= image_tag 'noimage1.png' ,class:'user_avatar2' %>
+               <% end %>
+               <%= post.user.nickname %>
+               </p>
                 <%end%>
                 </div>
                 <div class="spot-info">
@@ -44,15 +52,14 @@
          
            <div class="container d-flex">
          
-          <ul class="category_lists">
-                   <div class="row rows-cols2">
+          
+                   <ul class="category_lists">
            <% @parents.each do  |parent|%>
             <%= link_to category_path(parent.id) , class: "post_link" do%>
           <li><%= parent.name %></li>
           <% end %>
           <% end %>
-          </div>
-             </ul>
+           </ul>
       </div> 
         </div>
       </div>

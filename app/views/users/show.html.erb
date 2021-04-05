@@ -10,11 +10,11 @@
     <div class="user_edit_btn">
         <% if user_signed_in?%>
           <% if current_user.id== @user.id %>
-              <%= link_to "Edit Profile", edit_user_path,class:"btn btn-border edit_profile"  %>
+              <%= link_to "プロフィールを編集", edit_user_path,class:"btn btn-border edit_profile"  %>
               <% unless current_user.sns_credentials.present? %>
               <%= link_to "パスワード変更",  edit_user_registration_path,class:"btn btn-border edit_profile"  %>
               <% end %>
-              <%= link_to "ログアウト", destroy_user_session_path, method: :delete,class:"btn btn-border"  %>
+              
             <% end %>
         <% end %>
     </div>

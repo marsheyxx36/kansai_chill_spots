@@ -80,6 +80,69 @@
 	background:#000;
 }
 
+
+@media screen and (max-width: 480px) {
+	.follow_number{
+	font-size: 15px;
+	}
+
+	.user_edit_btn{
+		width:150px;
+		display: flex;
+		margin-top: 10%;
+	}
+
+	.edi_profile{
+		display: block;
+		margin-top: 10px;
+	}
+
+	.user_nickname{
+		font-size: 20px;
+		margin-top: 5%;
+	}
+	.user_image{
+		margin-top: 10%;
+	}
+}
+
+@media screen and (min-width: 780px) {
+	.user_image{
+		display: flex;
+	}
+
+	.user_profile{
+		width: 60%;
+	}
+
+	.user_edit_btn{
+		display: block;
+		width: 60%;
+		margin: 0 auto;
+	}
+.nickname{
+	text-align: center;
+}
+	.user_nickname{
+		margin-top: 30px;
+	    margin-left: 50px;
+	
+	}
+
+	.user_image{
+		text-align: center;
+		margin:100px auto 30px;
+	    width:60%;
+	}
+
+	.introduction{
+		margin: 0 auto;
+	}
+
+	.follow_form{
+		margin: 0 auto;
+	}
+}
 .user-form{
     margin-top: 100px;
 }
@@ -89,31 +152,24 @@
 }
 
 .user_menu{
-	margin-top: 4px;
-	margin-left: 10px;
 	color: white;
+	display: flex;
 }
 
 .user_edit_btn{
-    width:100%;
 	height: 100px;
     height:auto;
+	// margin: 0 auto;
     display: block;
-	text-align: left;
-	padding-left: 220px;
 }
 
 
 .nav-btn{
     width:400px;
-    display: flex;
 }
 
 .user_image{
-	display: flex;
-	margin:100px auto 30px;
-	width:60%;
-
+	
 }
 
 .dropdwn_menu{
@@ -153,6 +209,8 @@
 	border-radius: 20px;
 	background-color: #fff;
 	border: rgb(212, 209, 209) 1px solid;
+	
+	margin-left: 10px;
   }
 
   .user_avatar3{
@@ -162,12 +220,12 @@
 	background-color: #fff;
 	border: rgb(212, 209, 209) 1px solid;
   }
-
+  
 
 .introduction{
 	font-size: 20px;
 	width:60%;
-	margin: 30px auto;
+	margin-top: 7%;
 }
 
 
@@ -178,14 +236,11 @@
     height: 150px;
     padding: 10px;
     font-size: 15px;
-    width: 60%;
 	margin:10px auto 80px;
 }
 
 .user_nickname{
-	margin-top: 10px;
-	margin-left: 50px;
-	font-size: 20px;
+
 }
 
 .user_path2{
@@ -213,13 +268,13 @@
 }
 
 .follow_form{
-	margin: 0 auto;
 	width: 60%;
 	font-family: 'Kosugi', sans-serif;
     font-family: 'Noto Sans JP', sans-serif;
 }
 .follow_count{
 display: flex;
+
 }
 
 .follow{
