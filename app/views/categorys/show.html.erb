@@ -14,7 +14,7 @@
              
                   <p class="user-name">
                 <% if category.user.image.present? %>
-                  <%= image_tag category.image ,class:'user_avatar2' %>
+                  <%= image_tag category.user.image ,class:'user_avatar2' %>
                 <% else %>
                   <%= image_tag 'noimage1.png' ,class:'user_avatar2' %>
                <% end %>
