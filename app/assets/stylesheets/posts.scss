@@ -105,6 +105,10 @@ font-size: 20px;
     .copyright{
         margin-top: 50px;
     }
+
+    .sns_login{
+        padding-left:40px;
+    }
 }
 
 //ここからPC、タブレット用
@@ -157,6 +161,10 @@ font-size: 20px;
     .footer-logo{
         font-size:35px;
     }
+
+    .sns_login{
+        padding-left:150px;
+    }
 }
 
 
@@ -176,7 +184,7 @@ font-size: 20px;
 
 .btn.type08{
     width: 100%;
-    max-width: 400px;
+    max-width: 600px;
     height:49px;
     display: inline-block;
     text-align: center;
@@ -189,7 +197,7 @@ font-size: 20px;
 
     .btn.type09{
         width: 100%;
-        max-width: 400px;
+        max-width: 600px;
         height:49px;
         text-align: center;
         color:white;
@@ -204,7 +212,7 @@ font-size: 20px;
     display: block;
     height: 49px;
     padding-top: 5px;
-    padding-left:80px;
+ 
 }
 a.btn-border {
     color: inherit;

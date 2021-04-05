@@ -35,11 +35,12 @@
  
 
  <div class="field mt-5">
-        <%= f.label :profile%>
-        <%= f.text_field :profile, autofocus: true %>
-      </div>
+        <%= f.label :profile ,'自己紹介'%>
+        <%= f.text_area :profile, autofocus: true, class:"form-control" ,id:"exampleFormControlTextarea1" ,rows:"3" %>
+  </div>
+
   <div class="actions">
-    <%= f.submit "プロフィールを変更" %>
+    <%= f.submit "プロフィールを変更" ,class:"mb-5"%>
   </div>
 
   </div>
