@@ -89,6 +89,7 @@
 @media screen and (max-width: 480px) {
 	.follow_number{
 	font-size: 15px;
+    width: 100px;
 	}
 
 	.user_edit_btn{
@@ -156,6 +157,7 @@
 
 	.follow_form{
 		margin: 0 auto;
+		
 	}
 	.follow_title{
 		width: 60%;
@@ -305,6 +307,11 @@
 
 .follow_form{
 	width: 60%;
+	font-family: 'Kosugi', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+.my_follow_form{
+	width: 100%;
 	font-family: 'Kosugi', sans-serif;
     font-family: 'Noto Sans JP', sans-serif;
 }
