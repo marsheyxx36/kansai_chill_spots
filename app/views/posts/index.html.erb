@@ -5,9 +5,10 @@
       <div class="latest-post">
           <h1 class="latest-title mb-5">みんなの最新投稿</h1>
           <div class="container">
-           <div class="row d-flex">
+             <div class="row d-flex">
             <% @posts.each do |post| %>
-              <div class="post col3 ml-5 col-xs-6">
+            
+              <div class="post col-12  col-xl-3 col-md-4 col-lg-3 ">
               <%= link_to post_path(post.id) , class: "post_link" do%>
               <div class="image">
                 <%= image_tag post.image ,width:'230px',height:'205px' %>
@@ -30,36 +31,29 @@
                    <p class="spot-name">スポット名：<%= post.name %></p>
                 </div>
                 <div class="spot-info">
-                   <p class="spot-name">所在地：<%= post.area.parent.name %></p>
+                   <p class="spot-name">所在地：<%= post.area.parent.name %>：<%= post.area.name %></p>
                 </div>
               </div>
             </div>
               <% end %>
            <% end %>
-
-            
           </div>
-            
 
         </div>
       </div>
         <div class="category">
          <h1 class="category_title">都道府県から探してみる</h1>
 
-        <div class="container">
          
-           <div class="container d-flex">
-         
-          
+          <div class="container">
                    <ul class="category_lists">
            <% @parents.each do  |parent|%>
-            <%= link_to category_path(parent.id) , class: "post_link" do%>
+            <%= link_to category_path(parent.id) , class: "area_link" do%>
           <li><%= parent.name %></li>
           <% end %>
           <% end %>
            </ul>
-      </div> 
-        </div>
+           </div>
       </div>
 <footer>
   <div class="container">

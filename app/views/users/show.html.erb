@@ -39,23 +39,34 @@
       <div class="row d-flex">
         <% if @posts.length != 0   %>
             <% @posts.each do |post| %>
-              <div class="post col4 ml-5 col-xs-6">
+            
+              <div class="post col-12  col-xl-3 col-md-4 col-lg-3 ">
               <%= link_to post_path(post.id) , class: "post_link" do%>
               <div class="image">
                 <%= image_tag post.image ,width:'230px',height:'205px' %>
               </div>
               <div class="info">
                 <div class="user-info">
-                  <p class="user-name">投稿者：<%= post.user.nickname %></p>
+                 <%= link_to user_path(post.user.id) ,class:"user_path" do %>
+             
+                  <p class="user-name">
+                <% if post.user.image.present? %>
+                  <%= image_tag post.user.image ,class:'user_avatar2' %>
+                <% else %>
+                  <%= image_tag 'noimage1.png' ,class:'user_avatar2' %>
+               <% end %>
+               <%= post.user.nickname %>
+               </p>
+                <%end%>
                 </div>
                 <div class="spot-info">
                    <p class="spot-name">スポット名：<%= post.name %></p>
                 </div>
                 <div class="spot-info">
-                   <p class="spot-name">所在地：<%= post.area.parent.name %></p>
+                   <p class="spot-name">所在地：<%= post.area.parent.name %>：<%= post.area.name %></p>
                 </div>
               </div>
-              </div>
+            </div>
               <% end %>
            <% end %>
         <% else %>

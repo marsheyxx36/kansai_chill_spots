@@ -120,7 +120,7 @@
 	}
 }
 
-@media screen and (min-width: 780px) {
+@media screen and (min-width: 760px) {
 	.user_image{
 		display: flex;
 	}
@@ -132,8 +132,9 @@
 	.user_edit_btn{
 		display: block;
 		width: 60%;
-		// margin: 0 auto;
+		margin: 0 auto;
 	}
+
 .nickname{
 	text-align: center;
 }
@@ -302,7 +303,16 @@
 }
 .follow_count{
 display: flex;
+width: 60%;
 
+
+}
+
+.my_follow_count{
+	display: flex;
+width: 60%;
+margin: 0 auto;
+text-decoration: none;
 }
 
 .follow{

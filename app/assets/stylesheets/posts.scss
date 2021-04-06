@@ -70,8 +70,8 @@ font-size: 20px;
     }
 
     .top-image{
-
-        height:29vh;
+        background-image: url("/images/top-image2.png");
+        height:80vh;
 
         font-family: 'Noto Serif JP', serif;
         &__catchcopy{
@@ -111,14 +111,33 @@ font-size: 20px;
     .sns_login{
         padding-left:40px;
     }
+
+    .category_lists {
+        display: flex;
+        flex-direction: column;
+      }
 }
 
+@media screen and (min-width:480px) and ( max-width:767px){
+.top-image{
+    background-image: url("/images/top-image2.png");
+    height:90vh;
+}
+}
 //ここからPC、タブレット用
 
-@media screen and (min-width: 780px) { 
+@media screen and (min-width:768px) and ( max-width:1023px) {
+    .top-image{
+        height: 55vh;
+        background-image: url("/images/top-image.png");
+    }
+}
+
+@media screen and (min-width: 1024px) { 
 
     .top-image{
-        height: 800px;
+        height: 90vh;
+        background-image: url("/images/top-image.png");
     }
     .catch-image{
         width: 100%;
@@ -239,9 +258,8 @@ input[type="textarea"] {
 }
 
 .top-image{
-background-image: url("/images/top-image.png");
  width:100%;
- background-size: contain;
+ background-size: 100%;
  background-repeat: no-repeat;
  margin: 0 auto;
  font-family: 'Noto Serif JP', serif;
@@ -282,11 +300,16 @@ background-image: url("/images/top-image.png");
 .post{
     width:230px;
     height:400px;
+    margin: 0 auto;
 }
 
 .post_link{
+    width:230px;
     color: black;
     text-decoration: none;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .post_link:hover{
@@ -296,6 +319,7 @@ background-image: url("/images/top-image.png");
 .info{
     width: 230px;
     height:140px;
+    margin: 0 auto;
     background-color: white;
 }
 
@@ -509,16 +533,22 @@ input[type="text"] {
 }
 
 .category_lists{
+    width: 100%;
     list-style: none;
     margin: 30px auto 100px; 
-    // display: flex;
+    justify-content: space-between;
     text-align: center;
     padding: 0 auto;
 
 }
 
+.area_link{
+    text-decoration: none;
+    color: inherit;
+}
+
 ul li{
-    width: 150px;
+    // width: 150px;
     margin-top: 30px;
     font-size: 18px;
 }

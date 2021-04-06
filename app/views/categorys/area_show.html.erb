@@ -1,15 +1,16 @@
-<div class="show_post">
-  <h1 class="latest-title mb-5"><%= @area.name %>のスポット</h1>
-  <div class="container d-flex">
-    <div class="row rows-cols4">
-      <% @category.each do |category| %>
-        <div class="post col3 ml-5">
-          <%= link_to post_path(category.id) , class: "post_link" do%>
-            <div class="image">
-              <%= image_tag category.image ,width:'230px',height:'205px' %>
-            </div>
-            <div class="info">
-              <div class="user-info">
+<div class="latest-post">
+        <h1 class="latest-title mb-5"><%= @area.name %>のスポット</h1>
+          <div class="container">
+             <div class="row d-flex">
+           <% @category.each do |category| %>
+            
+              <div class="post col-12  col-xl-3 col-md-4 col-lg-3 ">
+              <%= link_to post_path(category.id) , class: "post_link" do%>
+              <div class="image">
+                <%= image_tag category.image ,width:'230px',height:'205px' %>
+              </div>
+              <div class="info">
+                <div class="user-info">
                  <%= link_to user_path(category.user.id) ,class:"user_path" do %>
              
                   <p class="user-name">
@@ -22,23 +23,23 @@
                </p>
                 <%end%>
                 </div>
-
-
-
-              <div class="spot-info">
-                <p class="spot-name">スポット名：<%= category.name %></p>
-              </div>
-
-              <div class="spot-info">
+                <div class="spot-info">
+                   <p class="spot-name">スポット名：<%= category.name %></p>
+                </div>
+                <div class="spot-info">
                    <p class="spot-name">所在地：<%= category.area.parent.name %></p>
                 </div>
+              </div>
             </div>
-          <% end %>
-       </div>
-       <% end %>
-    </div>
-  </div>
-</div>
+              <% end %>
+           <% end %>
+          </div>
+
+        </div>
+      </div>
+
+
+
 
 <div class="category">
          <h1 class="category_title">都道府県から探してみる</h1>

@@ -7,4 +7,17 @@
       <%= render "follow" %>
     <% end %>
   </div>
-<% end %>
+<% else %>
+<div class="my_follow_count mt-3">
+<div class="follower">
+      <%= link_to followers_user_path(@user.id) do %>
+          <h5 style="color: black; " class="follow_number">フォロワー<%= @user.followers.count %></h5>
+      <% end %>
+  </div>
+  <div class="follow">
+      <%= link_to following_user_path(@user.id) do %>
+                <h5 style="color: black;" class="follow_number">フォロー<%= @user.following.count %></h5>
+      <% end %>
+  </div>
+</div>
+<% end%>
