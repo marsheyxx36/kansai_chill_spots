@@ -38,6 +38,9 @@
   <%= f.hidden_field :latitude, id:"latitude" , value: "" %>
   <%= f.hidden_field :longitude, id:"longitude" , value: "" %>
 
+<p id="position_show"></p>
+  <p id="position_show2"></p>
+
     <input type="button" value="マップで検索" id="map_search">
 <p style="color: red;"><%= @post.errors.full_messages_for(:latitude).first %>
 <!-- 下の1行を追加 -->

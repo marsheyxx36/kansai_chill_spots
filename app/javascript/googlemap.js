@@ -3,11 +3,11 @@ let map
 let geocoder
 // 下の1行を追加 
 const display = document.getElementById('display')
-var url = location.href ;
-var url2 =url.slice(22);
-console.log(url2)
-if(url2.match(/\d{2,4}/)) {
 
+let position = document.getElementById('position_show')
+let position2 = document.getElementById('position_show2')
+console.log(position.innerHTML);
+if(position.innerHTML!= '' || position2.innerHTML!= '') {
   let position = document.getElementById('position_show')
   let position2 = document.getElementById('position_show2')
   console.log(Number(position.innerHTML))
