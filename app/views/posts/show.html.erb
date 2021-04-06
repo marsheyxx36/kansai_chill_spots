@@ -10,14 +10,11 @@
         <%= render partial: "likes/like", locals: { post:@post } %>
         </div>
  <div class="nav-btn edit_btn">
-         <div class="user_edit_btn">
+         <div class="user_edit_btn2">
         <% if user_signed_in?%>
           <% if current_user.id== @post.user.id %>
               <%= link_to "編集する", edit_post_path,class:"btn btn-border edit_profile"  %>
-              <% unless current_user.sns_credentials.present? %>
-              <%= link_to "削除する", post_path(@post),class:"btn btn-border edit_profile " ,method: :delete   %>
-              <% end %>
-              
+              <%= link_to "削除する", post_path(@post),class:"btn btn-border edit_profile " ,method: :delete   %>              
             <% end %>
         <% end %>
     </div>
