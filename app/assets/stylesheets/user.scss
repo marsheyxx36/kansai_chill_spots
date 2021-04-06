@@ -132,7 +132,7 @@
 	.user_edit_btn{
 		display: block;
 		width: 60%;
-		margin: 0 auto;
+		// margin: 0 auto;
 	}
 
 .nickname{
@@ -170,6 +170,10 @@
 	.follow_profile{
 		margin-left: 200px;
 		width: 40%;
+	}
+
+	.edi_profile{
+		float: left;
 	}
 }
 .user-form{
