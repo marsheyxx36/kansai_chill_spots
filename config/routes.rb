@@ -19,6 +19,10 @@ Rails.application.routes.draw do
       get 'detail_search'
       get 'update_done'
     end
+
+    collection do
+      get 'site_description'
+    end
   end
   resources :categorys do
     member do

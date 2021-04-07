@@ -33,6 +33,7 @@
   <div class="collapse navbar-collapse justify-content-end mt-2" id="navmenu1">
     <div class="navbar-nav">
       <a class="nav-item nav-link" href="#"></a>
+      <%= link_to "Kansai_chill_spotsとは？",site_description_posts_path, class:"nav-item nav-link" %>
        <% if user_signed_in? %>
         <%= link_to "ログアウト", destroy_user_session_path, method: :delete,class:" nav-item nav-link"  %>
          <%= link_to "スポット投稿",new_post_path, class:"nav-item nav-link",dataturbolinks: false %>
