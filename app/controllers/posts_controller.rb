@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!, except: [:show, :index]
+  before_action :authenticate_user!, except: [:show, :index,:site_description]
 
   def index
     @posts = Post.all
@@ -61,6 +61,8 @@ class PostsController < ApplicationController
     @category_children = Area.find(params[:parent_id].to_s).children
   end
 
+  def site_description
+  end
   private
 
   def post_params
