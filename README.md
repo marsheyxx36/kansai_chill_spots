@@ -52,6 +52,8 @@ Things you may want to cover:
 
 
 # 利用方法
+URL
+https://www.kansai-chill-spots.com/
 
 ## BASIC認証がかかっています。
 ID:admin 、pass:2222　でページにアクセスしてください。
