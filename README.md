@@ -27,7 +27,7 @@
 
 
 # 利用方法
-URL
+URL：
 https://www.kansai-chill-spots.com/
 
 ## BASIC認証がかかっています。
