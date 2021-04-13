@@ -47,7 +47,7 @@ Things you may want to cover:
 
 
 
-データーベース設計：
+# データーベース設計：
 
 ## Userテーブル
 
