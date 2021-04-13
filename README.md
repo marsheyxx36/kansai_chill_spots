@@ -32,7 +32,7 @@ Things you may want to cover:
 
 # 機能一覧
 
-・ユーザー登録機能、ログイン機能
+・ユーザー登録機能、ログイン機能(SNSアカウントでの新規登録、ログイン)
 
 ・スポット投稿機能
 
@@ -44,7 +44,6 @@ Things you may want to cover:
 
 ・いいね機能
 
-・SNSログイン機能(Google,Facebook)
 # 作った目的：
 
 静かで落ち着けるスポットの情報は探そうと思っても、なかなかネットでは見つけにくいという課題があります。
@@ -52,11 +51,16 @@ Things you may want to cover:
 
 
 # 利用方法
-ユーザー新規登録：
-・トップページより右上の新規登録をクリック
-・googleアカウント、Facebookアカウントでの登録も可能です。
+## ユーザー新規登録：
+トップページより右上の新規登録をクリック　※ googleアカウント、Facebookアカウントでの登録も可能です。
 
 ![fsxez-pi56z](https://user-images.githubusercontent.com/49363628/114500480-0ab10200-9c63-11eb-908b-45c5fd932553.gif)
+
+## スポット投稿機能
+
+https://user-images.githubusercontent.com/49363628/114504156-5f577b80-9c69-11eb-80bc-445100309904.mp4
+
+
 
 # データーベース設計：
 
