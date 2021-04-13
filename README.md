@@ -23,7 +23,31 @@ Things you may want to cover:
 
 * ...
 
+# Kansai_chill_spots
 
+
+# アプリケーション概要
+
+関西の静かな（チルアウトな）スポットの共有サイトです。
+
+# 機能一覧
+
+・ユーザー登録機能、ログイン機能
+
+・スポット投稿機能
+
+・スポットの詳細確認機能
+
+・コメント機能
+
+・ユーザー同士のフォロー機能
+
+・いいね機能
+
+
+
+
+データーベース設計：
 
 ## Userテーブル
 
@@ -41,6 +65,8 @@ Things you may want to cover:
 | description| string | null: false |
 | address| string | null: false |
 | image| string | null: false |
+| area_id| reference | foreign_key: true,null: false |
+| prefecture_id| integer | null: false |
 | latitude| float | null: false |
 | longitude| float | null: false |
 | user_id| reference | foreign_key: true,null: false |
@@ -52,3 +78,33 @@ Things you may want to cover:
 | text| string | null: false |
 | user_id| reference | foreign_key: true,null: false |
 | post_id| reference | foreign_key: true,null: false |
+
+## Areaテーブル
+
+| Column | type | option |
+| :--- | :--- | :--- |
+| name| string | null: false |
+| ancestry |string|
+
+## likeテーブル
+
+| Column | type | option |
+| :--- | :--- | :--- |
+| user_id| reference | foreign_key: true,null: false |
+| post_id| reference | foreign_key: true,null: false |
+
+
+##　Sns_Credentialsテーブル
+
+| Column | type | option |
+| :--- | :--- | :--- |
+| provider| string |  |
+| uid| string ||
+| user_id| reference | foreign_key: true|
+
+## Relationshipテーブル
+
+| Column | type | option |
+| :--- | :--- | :--- |
+| follower_id| reference | foreign_key: true|
+| following_id| reference | foreign_key: true|

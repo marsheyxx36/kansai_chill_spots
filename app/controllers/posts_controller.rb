@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!, except: [:show, :index,:site_description]
+  before_action :authenticate_user!, except: [:show, :index, :site_description]
 
   def index
     @posts = Post.all
@@ -63,6 +63,7 @@ class PostsController < ApplicationController
 
   def site_description
   end
+
   private
 
   def post_params
