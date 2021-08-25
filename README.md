@@ -1,5 +1,8 @@
 # Kansai_chill_spots
 
+<img width="1438" alt="スクリーンショット 2021-08-25 15 26 17" src="https://user-images.githubusercontent.com/49363628/130737766-602eb670-9ffa-482d-a920-678f82238898.png">
+
+
 
 # アプリケーション概要
 
