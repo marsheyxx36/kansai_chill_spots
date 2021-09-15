@@ -117,7 +117,7 @@ ID:admin 、pass:2222　でページにアクセスしてください。
 | post_id| reference | foreign_key: true,null: false |
 
 
-##　Sns_Credentialsテーブル
+## Sns_Credentialsテーブル
 
 | Column | type | option |
 | :--- | :--- | :--- |
