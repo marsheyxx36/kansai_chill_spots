@@ -34,6 +34,7 @@
 # 利用方法
 URL：
 https://www.kansai-chill-spots.com/
+※現在、公開を停止しております。申し訳ございません。
 
 ## BASIC認証がかかっています。
 ID:admin 、pass:2222　でページにアクセスしてください。
